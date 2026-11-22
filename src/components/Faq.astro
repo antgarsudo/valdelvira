@@ -1,0 +1,11 @@
+---
+interface Props { faqs: { q: string; a: string }[]; titulo?: string }
+const { faqs, titulo = 'Preguntas frecuentes' } = Astro.props;
+const md = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\[(PENDIENTE|VERIFICAR)([^\]]*)\]/g, '<span class="pending">[$1$2]</span>').replace(/\[([^\]]+)\]\((\/[^)]*)\)/g, '<a href="$2">$1</a>');
+---
+<section class="faq" aria-labelledby="faq-t">
+  <h2 id="faq-t">{titulo}</h2>
+  <dl>
+    {faqs.map((f) => (<><dt>{f.q}</dt><dd set:html={md(f.a)} /></>))}
+  </dl>
+</section>

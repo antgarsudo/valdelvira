@@ -1,0 +1,43 @@
+---
+import { TEMAS } from '../data/negocio';
+import PrivacyInfo from './PrivacyInfo.astro';
+interface Props { id?: string; tema?: string; titulo?: string | false }
+const { id = 'cita', tema = TEMAS[0], titulo = 'Pida su cita' } = Astro.props;
+---
+<form class="form js-form" action="/api/contact.php" method="post" novalidate data-ok="Gracias. Hemos recibido su solicitud y le llamaremos en horario de despacho. Si es urgente, llame al 954 72 52 12.">
+  {titulo && <h3 class="full t-title">{titulo}</h3>}
+  <div class="field">
+    <label for={`${id}-nombre`}>Nombre</label>
+    <input id={`${id}-nombre`} name="nombre" type="text" autocomplete="name" required maxlength="120" />
+  </div>
+  <div class="field">
+    <label for={`${id}-telefono`}>Teléfono</label>
+    <input id={`${id}-telefono`} name="telefono" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 +().-]{9,20}" maxlength="20" />
+  </div>
+  <div class="field">
+    <label for={`${id}-correo`}>Correo electrónico</label>
+    <input id={`${id}-correo`} name="correo" type="email" autocomplete="email" required maxlength="190" />
+  </div>
+  <div class="field">
+    <label for={`${id}-tema`}>Tema</label>
+    <select id={`${id}-tema`} name="tema" required>
+      {TEMAS.map((t) => <option value={t} selected={t === tema}>{t}</option>)}
+    </select>
+  </div>
+  <div class="field full">
+    <label for={`${id}-mensaje`}>Mensaje <span>(cuéntenos brevemente qué ha pasado)</span></label>
+    <textarea id={`${id}-mensaje`} name="mensaje" required minlength="10" maxlength="4000"></textarea>
+  </div>
+  <div class="hp" aria-hidden="true">
+    <label for={`${id}-campo_c7`}>No rellene este campo</label>
+    <input id={`${id}-campo_c7`} name="campo_c7" type="text" tabindex="-1" autocomplete="off" />
+  </div>
+  <label class="check full">
+    <input type="checkbox" name="acepta" value="1" required id={`${id}-acepta`} />
+    <span>He leído la información básica sobre protección de datos y acepto la <a href="/politica-de-privacidad/">política de privacidad</a>.</span>
+  </label>
+  <button class="btn full" type="submit">Enviar solicitud</button>
+  <p class="fstatus full" role="status" aria-live="polite"></p>
+  <PrivacyInfo />
+</form>
+<script src="../scripts/form.ts"></script>

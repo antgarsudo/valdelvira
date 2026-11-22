@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-22T11:26:57.377Z",
+        "reason": "instrucciones.md pide fuentes equivalentes a apple.com; SF Pro va primero en la pila y no se puede autoalojar por licencia, Inter es el sustituto autoalojado"
+      }
+    ]
+  }
+}

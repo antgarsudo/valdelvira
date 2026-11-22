@@ -1,0 +1,28 @@
+{
+  "name": "valdelvira-abogados",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build && node scripts/postbuild.mjs",
+    "build:demo": "DEPLOY_TARGET=demo npm run build",
+    "preview": "npm run build && php -S localhost:4321 -t dist scripts/dev-router.php",
+    "check": "astro check",
+    "nuevo-articulo": "node scripts/nuevo-articulo.mjs",
+    "deploy": "sh scripts/deploy.sh production",
+    "deploy:preview": "sh scripts/deploy.sh preview",
+    "rollback": "sh scripts/rollback.sh",
+    "paquete": "sh scripts/paquete.sh production",
+    "paquete:preview": "sh scripts/paquete.sh preview"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.3.10",
+    "@astrojs/sitemap": "3.7.6",
+    "astro": "7.4.13",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "typescript": "^5.9.0"
+  }
+}

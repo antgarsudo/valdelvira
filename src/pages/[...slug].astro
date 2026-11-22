@@ -1,0 +1,137 @@
+---
+// Páginas de servicio y artículos del blog. La URL sale del campo `url` del frontmatter.
+import { Picture } from 'astro:assets';
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import Faq from '../components/Faq.astro';
+import Author from '../components/Author.astro';
+import Cta from '../components/Cta.astro';
+import { getServicios, getArticulos, imagen, type Servicio, type Articulo } from '../lib/content';
+import { service, blogPosting, type Crumb } from '../lib/schema';
+import { NEGOCIO, MENU_TRAFICO, fecha } from '../data/negocio';
+
+export async function getStaticPaths() {
+  const servicios = await getServicios();
+  const articulos = await getArticulos();
+  return [
+    ...servicios.map((entry) => ({ params: { slug: entry.data.url.slice(1, -1) }, props: { kind: 'servicio' as const, entry } })),
+    ...articulos.map((entry) => ({ params: { slug: entry.data.url.slice(1, -1) }, props: { kind: 'articulo' as const, entry } })),
+  ];
+}
+
+type Props = { kind: 'servicio'; entry: Servicio } | { kind: 'articulo'; entry: Articulo };
+const { kind, entry } = Astro.props;
+const { Content } = await render(entry);
+const servicios = await getServicios();
+const articulos = await getArticulos();
+const byUrl = new Map(servicios.map((s) => [s.data.url, s]));
+const d = entry.data;
+const TRAFICO = '/abogados-accidentes-trafico/';
+
+let crumbs: Crumb[] = [{ name: 'Inicio', path: '/' }];
+let schema: object[] = [];
+let related: { title: string; text: string; href: string }[] = [];
+let posts: Articulo[] = [];
+let img = d.imagen ? imagen(d.imagen) : undefined;
+let alt = d.imagenAlt ?? '';
+let trafico = false;
+let servicioBlog: Servicio | undefined;
+
+if (kind === 'servicio') {
+  const s = entry.data;
+  trafico = s.bloque === 'trafico';
+  if (s.padre) crumbs.push({ name: byUrl.get(s.padre)?.data.navLabel ?? 'Accidentes de tráfico', path: s.padre });
+  else if (!trafico) crumbs.push({ name: 'Servicios', path: '/servicios/' });
+  crumbs.push({ name: s.navLabel, path: s.url });
+  schema = [service({ name: s.h1, serviceType: s.serviceType, path: s.url, description: s.description, trafico })];
+  const urls = [...new Set([...s.relacionados, ...(trafico || s.url === TRAFICO ? [] : [TRAFICO]), ...(s.padre && !s.relacionados.includes(s.padre) ? [s.padre] : [])])].filter((u) => u !== s.url);
+  related = urls.map((u) => byUrl.get(u)).filter((x): x is Servicio => !!x).slice(0, 3)
+    .map((r) => ({ title: r.data.navLabel, text: r.data.description.replace(/\s*(Llame|Consulte|Pida|Contacte|Solicite)[^.]*\.?$/i, ''), href: r.data.url }));
+  posts = articulos.filter((a) => a.data.servicio === s.url || (s.padre === undefined && a.data.servicio.startsWith(s.url))).slice(0, 3);
+} else {
+  const a = entry.data;
+  trafico = a.categoria === 'trafico';
+  crumbs.push({ name: 'Blog', path: '/blog/' }, { name: a.h1, path: a.url });
+  servicioBlog = byUrl.get(a.servicio);
+  schema = [blogPosting({ title: a.h1, description: a.description, path: a.url, image: (img ?? imagen('hero')).src, published: a.datePublished, modified: a.updated })];
+  posts = articulos.filter((p) => p.id !== entry.id && p.data.categoria === a.categoria).slice(0, 3);
+}
+const bloque = kind === 'servicio' && trafico;
+const lead = kind === 'servicio' ? entry.data.lead : entry.data.resumen;
+const rest = kind === 'servicio' ? entry.data.intro : '';
+---
+<BaseLayout title={d.title} description={d.description} path={d.url} crumbs={crumbs} schema={schema} type={kind === 'articulo' ? 'article' : 'website'} image={img && img.width >= 900 ? img : undefined}>
+  <header class={`page-head wrap${img ? ' page-head--img' : ''}`}>
+    <div>
+      <h1 class="t-hero">{d.h1}</h1>
+      <p class="lead t-sub">{lead}</p>
+      {kind === 'servicio' ? (
+        <div class="btn-row">
+          <a class="btn" href={`tel:${NEGOCIO.tel}`}><Icon name="phone" />Llamar al {NEGOCIO.telefono}</a>
+          <a class="btn btn--ghost" href="/solicitar-cita/">Pedir cita</a>
+        </div>
+      ) : (
+        <p class="meta">
+          <span>Por <a href="/despacho/">{NEGOCIO.abogada}</a></span>
+          <span>Actualizado el <time datetime={entry.data.updated.toISOString().slice(0, 10)}>{fecha(entry.data.updated)}</time></span>
+        </p>
+      )}
+    </div>
+    {img && (
+      <Picture formats={['avif', 'webp']} class="page-head__pic" src={img} alt={alt} widths={[400, 640, 900].filter((w) => w <= img!.width)} sizes="(max-width: 860px) 100vw, 440px" loading="eager" fetchpriority="high" />
+    )}
+  </header>
+
+  <div class="wrap layout section">
+    <article>
+      <div class="prose">
+        {rest && <p>{rest}</p>}
+        <Content />
+      </div>
+      <Faq faqs={d.faqs} />
+      <Author updated={d.updated} trafico={trafico} />
+    </article>
+    <aside class="aside" aria-label="Contacto y navegación">
+      <div class="aside__card">
+        <h2>¿Hablamos de su caso?</h2>
+        <p>Le atiende directamente la abogada. {NEGOCIO.horarioCorto}.</p>
+        <a class="btn" href={`tel:${NEGOCIO.tel}`}><Icon name="phone" />{NEGOCIO.telefono}</a>
+        <a class="btn btn--ghost" href="/solicitar-cita/">Pedir cita</a>
+      </div>
+      {bloque && (
+        <nav aria-label="Casos de tráfico">
+          <h2>Casos de tráfico</h2>
+          <ul>{MENU_TRAFICO.map((l) => <li><a href={l.href} aria-current={l.href === d.url ? 'page' : undefined}>{l.label}</a></li>)}</ul>
+        </nav>
+      )}
+      {kind === 'articulo' && servicioBlog && (
+        <div class="aside__card">
+          <h2>{servicioBlog.data.navLabel}</h2>
+          <p>{servicioBlog.data.h1}: le explicamos sus opciones y los plazos que corren.</p>
+          <a class="link-arrow" href={servicioBlog.data.url}>Ver el servicio</a>
+        </div>
+      )}
+    </aside>
+  </div>
+
+  {(related.length > 0 || posts.length > 0) && (
+    <section class="section section--alt" aria-labelledby="rel-t">
+      <div class="wide">
+        <h2 id="rel-t" class="group-title">{kind === 'servicio' ? 'Servicios relacionados' : 'Siga leyendo'}</h2>
+        {related.length > 0 && (
+          <div class="related">
+            {related.map((r) => <a href={r.href}><h3>{r.title}</h3><p>{r.text}</p><span class="link-arrow">Ver servicio</span></a>)}
+          </div>
+        )}
+        {posts.length > 0 && (
+          <div class="related mt-l">
+            {posts.map((p) => <a href={p.data.url}><h3>{p.data.h1}</h3><p>{p.data.resumen}</p><span class="link-arrow">Leer artículo</span></a>)}
+          </div>
+        )}
+        {kind === 'articulo' && !trafico && <p class="mt-l">La especialidad del despacho es el derecho de tráfico: si ha sufrido un accidente, consulte nuestra página de <a href={TRAFICO}>abogados de accidentes de tráfico en Dos Hermanas</a>.</p>}
+      </div>
+    </section>
+  )}
+  <Cta />
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+// Dónde estamos: datos NAP y mapa que solo se carga si el visitante lo pide (Google puede instalar cookies).
+import { Picture } from 'astro:assets';
+import rotulo from '../assets/despacho-reuniones.jpg';
+import Icon from './Icon.astro';
+import { NEGOCIO } from '../data/negocio';
+const q = encodeURIComponent(`${NEGOCIO.nombre}, ${NEGOCIO.direccion.calle}, ${NEGOCIO.direccion.cp} ${NEGOCIO.direccion.localidad}`);
+const embed = `https://www.google.com/maps?q=${NEGOCIO.geo.lat},${NEGOCIO.geo.lng}&z=17&output=embed`;
+---
+<div class="visit">
+  <div class="visit__card">
+    <div>
+      <h3>Dirección</h3>
+      <p>{NEGOCIO.direccion.calle}<br />{NEGOCIO.direccion.detalle}<br />{NEGOCIO.direccion.cp} {NEGOCIO.direccion.localidad} ({NEGOCIO.direccion.provincia})</p>
+    </div>
+    <div>
+      <h3>Teléfono</h3>
+      <p><a href={`tel:${NEGOCIO.tel}`} class="t-num">{NEGOCIO.telefono}</a></p>
+    </div>
+    <div>
+      <h3>Horario</h3>
+      <dl>
+        {NEGOCIO.horario.map((h) => (<><dt>{h.etiqueta}</dt><dd>{h.abre} – {h.cierra}</dd></>))}
+        <dt>Sábados y domingos</dt><dd>Cerrado</dd>
+      </dl>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn--ghost" href={NEGOCIO.mapsUrl} rel="noopener"><Icon name="route" />Cómo llegar</a>
+    </div>
+  </div>
+  <div class="map" data-map={embed}>
+    <Picture formats={['avif', 'webp']} src={rotulo} alt="Interior del despacho de Valdelvira Abogados en la Avenida de España de Dos Hermanas" widths={[480, 800, 1000]} sizes="(max-width: 860px) 100vw, 45vw" loading="lazy" />
+    <div class="map__consent">
+      <p>El mapa lo sirve Google, que puede instalar cookies propias al cargarlo. <a href="/politica-de-cookies/">Más información</a>.</p>
+      <div class="btn-row">
+        <button class="btn btn--sm js-map" type="button">Cargar mapa</button>
+        <a class="btn btn--sm btn--ghost" href={`https://www.google.com/maps/search/?api=1&query=${q}`} rel="noopener">Abrir en Google Maps</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../scripts/map.ts"></script>

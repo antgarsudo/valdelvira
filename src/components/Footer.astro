@@ -1,0 +1,47 @@
+---
+import { NEGOCIO, MENU_TRAFICO, MENU_OTROS, LEGALES } from '../data/negocio';
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="wide">
+    <div class="footer__grid">
+      <div>
+        <h2>{NEGOCIO.nombre}</h2>
+        <address>
+          <span>{NEGOCIO.abogada}, abogada colegiada nº {NEGOCIO.colegiada}</span>
+          <span>{NEGOCIO.direccion.calle}, {NEGOCIO.direccion.detalle}</span>
+          <span>{NEGOCIO.direccion.cp} {NEGOCIO.direccion.localidad} ({NEGOCIO.direccion.provincia})</span>
+          <a class="footer__tel" href={`tel:${NEGOCIO.tel}`}>{NEGOCIO.telefonoIntl}</a>
+          <span>{NEGOCIO.horarioCorto}</span>
+          <a href={NEGOCIO.mapsUrl} rel="noopener">Cómo llegar en Google Maps</a>
+        </address>
+      </div>
+      <nav aria-label="Tráfico">
+        <h2>Tráfico</h2>
+        <ul>{MENU_TRAFICO.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+      </nav>
+      <nav aria-label="Otros servicios">
+        <h2>Otros servicios</h2>
+        <ul>{MENU_OTROS.map((l) => <li><a href={l.href}>{l.label}</a></li>)}<li><a href="/servicios/">Todos los servicios</a></li></ul>
+      </nav>
+      <nav aria-label="Despacho">
+        <h2>Despacho</h2>
+        <ul>
+          <li><a href="/despacho/">Sonia Valdelvira</a></li>
+          <li><a href="/solicitar-cita/">Pedir cita</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/buscar/">Buscar</a></li>
+          <li><a href="/mapa-del-sitio/">Mapa del sitio</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p>© {year} {NEGOCIO.nombre}. Atendemos en Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios, Coria del Río y Sevilla.</p>
+      <ul>{LEGALES.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+    </div>
+  </div>
+</footer>
+<div class="callbar">
+  <a class="btn" href={`tel:${NEGOCIO.tel}`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.6 3.5h2.6l1.4 4-2 1.3a12 12 0 0 0 6.6 6.6l1.3-2 4 1.4v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/></svg>Llamar</a>
+  <a class="btn btn--ghost" href="/solicitar-cita/">Pedir cita</a>
+</div>

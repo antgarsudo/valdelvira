@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "astro-dev", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev"], "port": 4321 },
+    { "name": "preview-php", "runtimeExecutable": "php", "runtimeArgs": ["-S", "localhost:4322", "-t", "dist", "scripts/dev-router.php"], "port": 4322 }
+  ]
+}

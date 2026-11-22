@@ -1,0 +1,16 @@
+---
+import { NEGOCIO } from '../data/negocio';
+interface Props { titulo?: string; texto?: string }
+const { titulo = 'Cuéntenos su caso. Le atiende directamente la abogada.', texto = 'Llame en horario de despacho o pida cita y le llamamos nosotros.' } = Astro.props;
+---
+<section class="section section--blue cta" aria-labelledby="cta-t">
+  <div class="wrap">
+    <h2 id="cta-t" class="t-headline">{titulo}</h2>
+    <p>{texto}</p>
+    <a class="cta__tel" href={`tel:${NEGOCIO.tel}`}>{NEGOCIO.telefono}</a>
+    <div class="btn-row">
+      <a class="btn btn--white" href={`tel:${NEGOCIO.tel}`}>Llamar ahora</a>
+      <a class="btn btn--ghost-white" href="/solicitar-cita/">Pedir cita</a>
+    </div>
+  </div>
+</section>

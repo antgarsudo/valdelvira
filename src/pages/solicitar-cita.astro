@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Visit from '../components/Visit.astro';
+import Icon from '../components/Icon.astro';
+import { NEGOCIO } from '../data/negocio';
+---
+<BaseLayout title="Pedir cita con abogado en Dos Hermanas | Valdelvira" description="Pida cita con la abogada Sonia Valdelvira en Dos Hermanas: formulario, teléfono, dirección, horario y qué documentos traer. Llame al 954 72 52 12." path="/solicitar-cita/" crumbs={[{ name: 'Inicio', path: '/' }, { name: 'Pedir cita', path: '/solicitar-cita/' }]}>
+  <section class="section" aria-labelledby="h1">
+    <div class="wrap form-wrap">
+      <div>
+        <h1 id="h1" class="t-hero">Pida su primera cita</h1>
+        <p class="t-sub mt-s">Cuéntenos qué ha pasado y le llamamos en horario de despacho. La primera consulta es gratuita <span class="pending">[VERIFICAR: confirmar que se mantiene]</span>.</p>
+        <p class="mt-m"><a class="cta__tel cta__tel--ink" href={`tel:${NEGOCIO.tel}`}>{NEGOCIO.telefono}</a></p>
+        <p class="t-small">{NEGOCIO.horarioCorto}</p>
+        <div class="btn-row mt-m">
+          <a class="btn" href={`tel:${NEGOCIO.tel}`}><Icon name="phone" />Llamar ahora</a>
+        </div>
+      </div>
+      <ContactForm id="cita" titulo="Solicitud de cita" />
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="docs-t">
+    <div class="wrap prose">
+      <h2 id="docs-t">Qué documentos traer a la primera cita</h2>
+      <p>Traiga lo que tenga; si falta algo, lo pediremos después. Según su caso:</p>
+      <ul>
+        <li><strong>Accidente de tráfico:</strong> parte amistoso o atestado, datos del otro vehículo y su aseguradora, su póliza, informes de urgencias y médicos, partes de baja, fotos y facturas de gastos.</li>
+        <li><strong>Multa o alcoholemia:</strong> la notificación o denuncia, la citación del juzgado si la hay y su permiso de conducir.</li>
+        <li><strong>Familia:</strong> libro de familia, convenio o sentencia anterior y datos de ingresos.</li>
+        <li><strong>Herencia:</strong> certificado de defunción, certificado de últimas voluntades y testamento si existe.</li>
+        <li><strong>Desahucio o civil:</strong> contrato, recibos, comunicaciones y requerimientos de pago.</li>
+      </ul>
+      <h2>Cómo llegar y aparcar</h2>
+      <p>El despacho está en el Edificio D. José, en la Avenida de España, 57, primera planta, oficina 25. <span class="pending">[PENDIENTE: cómo llegar y aparcamiento]</span></p>
+      <h2>Primera consulta</h2>
+      <p>En la primera consulta estudiamos su caso y le decimos con claridad si tiene algo que reclamar, qué plazos corren y cuáles son los siguientes pasos. <span class="pending">[PENDIENTE: confirmar si es gratuita y la política de honorarios]</span></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="donde-t">
+    <div class="wide">
+      <h2 id="donde-t" class="group-title">Dónde estamos</h2>
+      <Visit />
+    </div>
+  </section>
+</BaseLayout>

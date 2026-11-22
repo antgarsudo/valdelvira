@@ -1,0 +1,10 @@
+---
+// Correo protegido: en el HTML no aparece nunca en claro. Se descodifica en el navegador tras la primera interacción.
+import { NEGOCIO } from '../data/negocio';
+import { encodeEmail } from '../lib/email';
+interface Props { label?: string }
+const { label } = Astro.props;
+const e = encodeEmail(`${NEGOCIO.email.usuario}@${NEGOCIO.email.dominio}`);
+---
+<a class="eml" href="/solicitar-cita/" data-e={e} data-label={label ? '1' : undefined}>{label ?? `${NEGOCIO.email.usuario} [arroba] ${NEGOCIO.email.dominio.replace('.', ' [punto] ')}`}</a>
+<script src="../scripts/email.ts"></script>

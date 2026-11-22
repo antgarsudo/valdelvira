@@ -1,0 +1,174 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import Visit from '../components/Visit.astro';
+import ContactForm from '../components/ContactForm.astro';
+import hero from '../assets/hero.webp';
+import sala from '../assets/despacho-sala.webp';
+import { NEGOCIO } from '../data/negocio';
+
+const pasos = [
+  { t: 'Póngase a salvo y llame al 112', p: 'Si hay heridos, pida asistencia. Señalice el vehículo y póngase el chaleco antes de salir a la calzada.' },
+  { t: 'Recoja los datos', p: 'Matrículas, conductores, aseguradoras, testigos, lugar y hora. Haga fotos de los vehículos y de la vía.' },
+  { t: 'Vaya al médico', p: 'Aunque solo note una molestia leve. El latigazo cervical suele dar la cara horas después.' },
+  { t: 'No firme ninguna oferta', p: 'No acepte una indemnización de la aseguradora sin que una abogada revise si cubre todo.' },
+  { t: 'Guarde cada justificante', p: 'Informes médicos, bajas, facturas, tickets de farmacia y de transporte. Todo suma al reclamar.' },
+];
+
+const casos = [
+  { icon: 'moto', t: 'Accidentes de moto', p: 'Lesiones graves, equipamiento y reclamación completa.', href: '/abogados-accidentes-trafico/accidente-moto/' },
+  { icon: 'walk', t: 'Atropellos', p: 'Peatones heridos: la responsabilidad del conductor.', href: '/abogados-accidentes-trafico/atropello/' },
+  { icon: 'scooter', t: 'Bicicleta y patinete', p: 'Ciclistas y usuarios de patinete eléctrico.', href: '/abogados-accidentes-trafico/bicicleta-patinete/' },
+  { icon: 'neck', t: 'Lesiones y latigazo cervical', p: 'Valoración médica y secuelas según el baremo.', href: '/abogados-accidentes-trafico/latigazo-cervical/' },
+  { icon: 'shield', t: 'Reclamación a la aseguradora', p: 'Oferta motivada baja, retrasos o rechazo del siniestro.', href: '/abogados-accidentes-trafico/reclamacion-aseguradora/' },
+  { icon: 'heart', t: 'Fallecimiento', p: 'Acompañamos a las familias con respeto y rigor.', href: '/abogados-accidentes-trafico/fallecimiento/' },
+  { icon: 'glass', t: 'Alcoholemia y delitos', p: 'Defensa en juicios rápidos y delitos de tráfico.', href: '/abogado-alcoholemia-delitos-trafico/' },
+  { icon: 'ticket', t: 'Multas y puntos', p: 'Recursos, alegaciones y pérdida de puntos.', href: '/recurso-multas-trafico/' },
+] as const;
+
+const otros = [
+  { icon: 'family', t: 'Familia y divorcio', p: 'Divorcio, custodia, pensiones y convenio regulador.', href: '/abogados-familia/' },
+  { icon: 'doc', t: 'Herencias', p: 'Aceptación, reparto, legítimas y testamentos.', href: '/abogados-herencias/' },
+  { icon: 'key', t: 'Desahucios', p: 'Impago, fin de contrato y reclamación de rentas.', href: '/abogados-desahucios/' },
+  { icon: 'pen', t: 'Derecho civil', p: 'Contratos, deudas y división de cosa común.', href: '/derecho-civil/' },
+] as const;
+
+const proceso = [
+  { t: 'Primera consulta', p: 'Nos cuenta qué ha pasado, por teléfono o en el despacho, y le decimos con claridad si tiene algo que reclamar.' },
+  { t: 'Estudio del caso', p: 'Revisamos el atestado o parte, los informes médicos y la póliza. Si hace falta, contamos con un perito médico.' },
+  { t: 'Estrategia', p: 'Le explicamos las opciones, los plazos y los riesgos: negociar con la aseguradora o ir a juicio.' },
+  { t: 'Seguimiento', p: 'Le mantenemos informado en cada paso y hablamos siempre directamente con la abogada.' },
+];
+---
+<BaseLayout
+  title="Abogados de tráfico en Dos Hermanas | Accidentes y multas"
+  description="Abogada especialista en tráfico en Dos Hermanas (Sevilla): reclamamos su indemnización por accidente, recurrimos multas y le defendemos. Llame al 954 72 52 12."
+  path="/"
+>
+  <section class="hero hero--blue" aria-labelledby="h1">
+    <div class="wrap">
+      <h1 id="h1" class="t-hero">Abogada especialista en tráfico y accidentes en Dos Hermanas</h1>
+      <p class="t-sub">Si ha sufrido un accidente, le ayudamos a reclamar todo lo que le corresponde.</p>
+      <div class="btn-row">
+        <a class="btn" href={`tel:${NEGOCIO.tel}`}><Icon name="phone" />Llamar al {NEGOCIO.telefono}</a>
+        <a class="btn btn--ghost" href="/solicitar-cita/">Pedir cita</a>
+      </div>
+      <p class="hero__addr t-small"><Icon name="pin" />Av. de España, 57 · Dos Hermanas, Sevilla</p>
+    </div>
+    <div class="hero__img wide">
+      <Picture formats={['avif', 'webp']} src={hero} alt="Mesa del despacho de Valdelvira Abogados en Dos Hermanas, con las carpetas azules de los expedientes de accidentes de tráfico" widths={[640, 960, 1280, 1920]} sizes="(max-width: 1328px) calc(100vw - 8vw), 1280px" loading="eager" fetchpriority="high" />
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="accidente-t">
+    <div class="wide">
+      <div class="section-head">
+        <h2 id="accidente-t" class="t-headline">¿Ha tenido un accidente de tráfico?</h2>
+        <p class="t-sub">Lo que haga en las primeras horas cuenta. Estos cinco pasos protegen su salud y su derecho a una indemnización.</p>
+      </div>
+      <ol class="steps reveal">
+        {pasos.map((s) => <li><h3>{s.t}</h3><p>{s.p}</p></li>)}
+      </ol>
+      <div class="btn-row mt-l">
+        <a class="btn" href="/que-debo-hacer-en-caso-de-tener-un-accidente-de-trafico/">Leer la guía completa<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="casos-t">
+    <div class="wide">
+      <div class="section-head">
+        <h2 id="casos-t" class="t-headline">Casos de tráfico que llevamos</h2>
+        <p class="t-sub">Desde un golpe por alcance hasta un atropello grave. Cada caso tiene sus reglas, sus plazos y su forma de valorarse.</p>
+      </div>
+      <div class="cases">
+        <a class="case case--lead" href="/abogados-accidentes-trafico/">
+          <Icon name="car" />
+          <h3>Accidentes de coche e indemnizaciones</h3>
+          <p>Reclamamos las lesiones, las secuelas, los días de baja, los daños del vehículo y los gastos. Negociamos con la aseguradora y, si no paga lo justo, vamos a juicio.</p>
+          <span class="link-arrow">Abogados de accidentes de tráfico</span>
+        </a>
+        {casos.map((c) => (
+          <a class="case" href={c.href}>
+            <Icon name={c.icon} />
+            <h3>{c.t}</h3>
+            <p>{c.p}</p>
+            <span class="link-arrow">Ver más</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="porque-t">
+    <div class="wrap split">
+      <div>
+        <h2 id="porque-t" class="t-headline">Por qué una abogada especialista en tráfico</h2>
+        <p class="t-sub mt-s">Las aseguradoras tienen abogados y peritos propios. Usted también debería.</p>
+        <ul class="reasons">
+          <li><Icon name="route" /><div><h3>Dedicación al derecho de tráfico</h3><p>El tráfico es la especialidad del despacho: el baremo, los plazos y la forma de negociar de cada compañía. <span class="pending">[PENDIENTE: años de ejercicio y formación específica en tráfico]</span></p></div></li>
+          <li><Icon name="user" /><div><h3>Trato directo con la abogada</h3><p>Hablará siempre con Sonia Valdelvira, no con un centro de llamadas ni con un gestor distinto cada vez.</p></div></li>
+          <li><Icon name="medical" /><div><h3>Peritos médicos independientes</h3><p>Sus lesiones se valoran con un informe propio, no solo con el del médico de la aseguradora.</p></div></li>
+          <li><Icon name="chat" /><div><h3>Negociación y juicio</h3><p>Primero intentamos un acuerdo justo. Si la oferta es baja, defendemos su reclamación en el juzgado.</p></div></li>
+        </ul>
+      </div>
+      <Picture formats={['avif', 'webp']} src={sala} alt="Sala de reuniones del despacho de abogados de tráfico en Dos Hermanas" widths={[480, 720, 960]} sizes="(max-width: 860px) 100vw, 45vw" />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="otros-t">
+    <div class="wide">
+      <div class="section-head">
+        <h2 id="otros-t" class="t-title">Otros servicios del despacho</h2>
+        <p>Además del tráfico, le asesoramos en familia, herencias, alquileres y derecho civil. <a href="/servicios/">Ver todos los servicios</a>.</p>
+      </div>
+      <div class="others">
+        {otros.map((o) => (
+          <a class="case" href={o.href}>
+            <Icon name={o.icon} />
+            <h3>{o.t}</h3>
+            <p>{o.p}</p>
+            <span class="link-arrow">Ver más</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--blue" aria-labelledby="proceso-t">
+    <div class="wide">
+      <div class="section-head">
+        <h2 id="proceso-t" class="t-headline">Cómo trabajamos</h2>
+      </div>
+      <ol class="process">
+        {proceso.map((s) => <li><h3>{s.t}</h3><p>{s.p}</p></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="donde-t">
+    <div class="wide">
+      <div class="section-head">
+        <h2 id="donde-t" class="t-headline">Dónde estamos</h2>
+        <p class="t-sub">En la Avenida de España de Dos Hermanas. Atendemos a clientes de Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios, Coria del Río y Sevilla capital, y por videollamada en toda España.</p>
+        <p class="mt-m">
+          <a class="rating" href={NEGOCIO.mapsUrl} rel="noopener"><Icon name="star" /><strong>{NEGOCIO.valoracionGoogle.nota}</strong> en Google · {NEGOCIO.valoracionGoogle.opiniones} opiniones</a>
+        </p>
+      </div>
+      <Visit />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="cita-t" id="cita">
+    <div class="wrap form-wrap">
+      <div>
+        <h2 id="cita-t" class="t-headline">Pida su cita</h2>
+        <p class="t-sub mt-s">Déjenos sus datos y le llamamos en horario de despacho. Si su caso es urgente, llámenos.</p>
+        <p class="mt-m"><a class="cta__tel cta__tel--ink" href={`tel:${NEGOCIO.tel}`}>{NEGOCIO.telefono}</a></p>
+        <p class="t-small">{NEGOCIO.horarioCorto}</p>
+      </div>
+      <ContactForm id="home" titulo={false} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { NEGOCIO } from '../data/negocio';
+---
+<LegalLayout title="Declaración de accesibilidad | Valdelvira Abogados" description="Compromiso de accesibilidad de valdelvira-abogados.com: nivel WCAG 2.2 AA, medidas aplicadas, limitaciones conocidas y cómo comunicarnos un problema." path="/declaracion-de-accesibilidad/" h1="Declaración de accesibilidad" updated={new Date('2026-11-22')}>
+  <p>{NEGOCIO.nombre} quiere que cualquier persona pueda usar esta web, incluidas las personas con discapacidad, mayores o que nos visitan después de un accidente con movilidad reducida.</p>
+  <h2>Situación de cumplimiento</h2>
+  <p>Esta web es <strong>parcialmente conforme</strong> con las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2, nivel AA, y con la norma UNE-EN 301 549. La evaluación la ha hecho el propio despacho (autoevaluación) el 22 de noviembre de 2026.</p>
+  <h2>Qué hemos hecho</h2>
+  <ul>
+    <li>Estructura de encabezados ordenada, un único título principal por página y regiones de navegación identificadas.</li>
+    <li>Contraste de color suficiente entre texto y fondo, y tamaños de texto grandes.</li>
+    <li>Navegación completa con teclado, enlace para saltar al contenido y foco siempre visible.</li>
+    <li>Textos alternativos en todas las imágenes con información.</li>
+    <li>Formulario con etiquetas visibles, mensajes de error que explican cómo corregirlos y aviso del resultado para lectores de pantalla.</li>
+    <li>Sin captchas visuales: la protección contra bots es invisible.</li>
+    <li>Las animaciones se desactivan si su sistema pide reducir el movimiento.</li>
+    <li>Teléfono pulsable en todas las páginas y botón fijo de llamada en el móvil.</li>
+  </ul>
+  <h2>Limitaciones conocidas</h2>
+  <ul>
+    <li>El mapa de Google Maps, si se carga, depende de Google y puede no ser plenamente accesible. La dirección y el horario están siempre escritos en la página.</li>
+    <li>Algunos documentos legales enlazados de terceros (BOE, DGT) pueden no cumplir los mismos criterios.</li>
+  </ul>
+  <h2>Comunicaciones</h2>
+  <p>Si encuentra una barrera de accesibilidad o necesita la información en otro formato, llámenos al <a href={`tel:${NEGOCIO.tel}`}>{NEGOCIO.telefono}</a> o escríbanos desde el <a href="/solicitar-cita/">formulario de contacto</a> eligiendo «Otro asunto». Le responderemos en un plazo máximo de 20 días hábiles.</p>
+  <h2>Revisión</h2>
+  <p>Esta declaración se revisará al menos una vez al año o cuando cambie la web de forma importante.</p>
+</LegalLayout>

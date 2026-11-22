@@ -1,0 +1,44 @@
+---
+import { getImage } from 'astro:assets';
+import ogSrc from '../assets/hero.webp';
+import { NEGOCIO, SITE_URL } from '../data/negocio';
+import { organization, website, breadcrumbs, type Crumb } from '../lib/schema';
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  noindex?: boolean;
+  crumbs?: Crumb[];
+  schema?: object[];
+  type?: 'website' | 'article';
+  image?: ImageMetadata;
+}
+const { title, description, path, noindex = false, crumbs = [], schema = [], type = 'website', image } = Astro.props;
+// Previsualización, demo (DEPLOY_TARGET=demo) o Cloudflare Pages (CF_PAGES): todo noindex.
+const preview = ['preview', 'demo'].includes(process.env.DEPLOY_TARGET ?? '') || !!process.env.CF_PAGES;
+const canonical = new URL(path, SITE_URL).href;
+const og = await getImage({ src: image ?? ogSrc, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 80 });
+const ogUrl = new URL(og.src, SITE_URL).href;
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [organization('/icon-512.png', og.src), website(), ...(crumbs.length ? [breadcrumbs(crumbs)] : []), ...schema],
+};
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content={noindex || preview ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={NEGOCIO.nombre} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogUrl} />
+<script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g, '\\u003c')} />

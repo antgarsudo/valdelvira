@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getServicios, getArticulos } from '../lib/content';
+import { LEGALES } from '../data/negocio';
+const servicios = await getServicios();
+const articulos = await getArticulos();
+---
+<BaseLayout title="Mapa del sitio | Valdelvira Abogados" description="Todas las páginas de la web de Valdelvira Abogados: servicios de tráfico, otros servicios, artículos del blog, contacto y textos legales." path="/mapa-del-sitio/" noindex crumbs={[{ name: 'Inicio', path: '/' }, { name: 'Mapa del sitio', path: '/mapa-del-sitio/' }]}>
+  <section class="section">
+    <div class="wrap">
+      <h1 class="t-headline">Mapa del sitio</h1>
+      <h2 class="t-title mt-l">Páginas</h2>
+      <ul class="sitemap-list mt-s">
+        <li><a href="/">Inicio</a></li><li><a href="/servicios/">Servicios</a></li><li><a href="/despacho/">El despacho</a></li><li><a href="/solicitar-cita/">Pedir cita</a></li><li><a href="/blog/">Blog</a></li>
+      </ul>
+      <h2 class="t-title mt-l">Servicios</h2>
+      <ul class="sitemap-list mt-s">{servicios.map((s) => <li><a href={s.data.url}>{s.data.h1}</a></li>)}</ul>
+      <h2 class="t-title mt-l">Artículos</h2>
+      <ul class="sitemap-list mt-s">{articulos.map((a) => <li><a href={a.data.url}>{a.data.h1}</a></li>)}</ul>
+      <h2 class="t-title mt-l">Información legal</h2>
+      <ul class="sitemap-list mt-s">{LEGALES.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+    </div>
+  </section>
+</BaseLayout>

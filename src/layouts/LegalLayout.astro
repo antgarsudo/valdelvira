@@ -1,0 +1,17 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { fecha } from '../data/negocio';
+interface Props { title: string; description: string; path: string; h1: string; updated?: Date; noindex?: boolean }
+const { title, description, path, h1, updated, noindex = true } = Astro.props;
+---
+<BaseLayout title={title} description={description} path={path} noindex={noindex} crumbs={[{ name: 'Inicio', path: '/' }, { name: h1, path }]}>
+  <div class="wrap legal">
+    <header class="page-head">
+      <h1 class="t-headline">{h1}</h1>
+      {updated && <p class="meta">Última actualización: <time datetime={updated.toISOString().slice(0, 10)}>{fecha(updated)}</time></p>}
+    </header>
+    <div class="prose mt-l">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

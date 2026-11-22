@@ -1,0 +1,62 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import Cta from '../components/Cta.astro';
+import rotulo from '../assets/despacho-rotulo.jpg';
+import trabajo from '../assets/despacho-trabajo.webp';
+import { NEGOCIO, MENU_TRAFICO, MENU_OTROS } from '../data/negocio';
+import { person } from '../lib/schema';
+---
+<BaseLayout title="Sonia Valdelvira, abogada de tráfico | Valdelvira Abogados" description="Sonia Valdelvira Lobo, abogada especialista en tráfico en Dos Hermanas: accidentes, indemnizaciones, multas y delitos de tráfico. Pida cita: 954 72 52 12." path="/despacho/" crumbs={[{ name: 'Inicio', path: '/' }, { name: 'El despacho', path: '/despacho/' }]} schema={[person()]}>
+  <header class="page-head wrap page-head--img">
+    <div>
+      <h1 class="t-hero">Sonia Valdelvira, abogada especialista en tráfico en Dos Hermanas</h1>
+      <p class="lead t-sub">Valdelvira Abogados es el despacho de Sonia Valdelvira Lobo, abogada colegiada nº {NEGOCIO.colegiada}, en la Avenida de España de Dos Hermanas. Su especialidad es el derecho de tráfico: reclamar indemnizaciones por accidente y defender a conductores.</p>
+      <div class="btn-row">
+        <a class="btn" href={`tel:${NEGOCIO.tel}`}><Icon name="phone" />Llamar al {NEGOCIO.telefono}</a>
+        <a class="btn btn--ghost" href="/solicitar-cita/">Pedir cita</a>
+      </div>
+    </div>
+    <div>
+      <Picture formats={['avif', 'webp']} class="page-head__pic" src={trabajo} alt="Mesa de trabajo de la abogada Sonia Valdelvira en su despacho de Dos Hermanas" widths={[400, 640, 900]} sizes="(max-width: 860px) 100vw, 440px" loading="eager" fetchpriority="high" />
+      <p class="t-small mt-s"><span class="pending">[PENDIENTE: foto profesional de la abogada]</span></p>
+    </div>
+  </header>
+
+  <div class="wrap section">
+    <div class="prose">
+      <h2>Una abogada centrada en el tráfico</h2>
+      <p>El derecho de tráfico es el eje del despacho. Sonia Valdelvira lleva reclamaciones de indemnización por <a href="/abogados-accidentes-trafico/">accidentes de tráfico</a>, lesiones como el <a href="/abogados-accidentes-trafico/latigazo-cervical/">latigazo cervical</a>, negociaciones con las aseguradoras y la defensa de conductores en <a href="/recurso-multas-trafico/">multas</a> y <a href="/abogado-alcoholemia-delitos-trafico/">delitos de tráfico</a>.</p>
+      <p><span class="pending">[PENDIENTE: biografía de la abogada, años de ejercicio, formación específica en tráfico, responsabilidad civil y valoración del daño corporal, y tipos de casos llevados. No se publica nada hasta que la abogada lo facilite.]</span></p>
+
+      <h2>Colegiación y credenciales</h2>
+      <ul>
+        <li>Abogada colegiada nº {NEGOCIO.colegiada} del {NEGOCIO.colegio} <span class="pending">[PENDIENTE: confirmar colegio]</span>.</li>
+        <li>Sujeta al Estatuto General de la Abogacía Española y a su Código Deontológico, incluido el secreto profesional.</li>
+        <li><span class="pending">[PENDIENTE: seguro de responsabilidad civil profesional y formación acreditable]</span></li>
+      </ul>
+
+      <h2>Otras áreas de trabajo</h2>
+      <p>Además del tráfico, el despacho asesora en <a href="/abogados-familia/">derecho de familia y divorcios</a>, <a href="/abogados-herencias/">herencias y testamentos</a>, <a href="/abogados-desahucios/">desahucios</a> y <a href="/derecho-civil/">derecho civil</a>, con el mismo trato directo.</p>
+
+      <h2>Cómo entendemos el trabajo</h2>
+      <ul>
+        <li><strong>Claridad.</strong> Le explicamos lo que puede reclamar, los plazos y los riesgos sin tecnicismos y sin promesas.</li>
+        <li><strong>Trato directo.</strong> Su caso lo lleva la abogada de principio a fin.</li>
+        <li><strong>Rigor.</strong> Cada reclamación se apoya en documentación médica y pericial, y en la norma aplicable.</li>
+        <li><strong>Cercanía.</strong> Un despacho en Dos Hermanas, a pocos minutos de Montequinto, Alcalá de Guadaíra, Utrera o Sevilla.</li>
+      </ul>
+
+      <h2>El despacho</h2>
+      <p>Estamos en {NEGOCIO.direccion.calle}, {NEGOCIO.direccion.detalle}, en Dos Hermanas. Atendemos con cita previa en horario de mañana y, si no puede desplazarse, por teléfono o videollamada.</p>
+      <p><span class="pending">[PENDIENTE: equipo, si lo hay]</span></p>
+    </div>
+    <Picture formats={['avif', 'webp']} class="mt-l rounded-lg" src={rotulo} alt="Rótulo de Valdelvira Abogados en la entrada del despacho de Dos Hermanas" widths={[640, 1000, 1400]} sizes="(max-width: 1100px) 100vw, 1068px" />
+    <nav class="mt-l" aria-label="Servicios">
+      <h2 class="t-title">Servicios</h2>
+      <ul class="sitemap-list mt-s">{[...MENU_TRAFICO, ...MENU_OTROS].map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+    </nav>
+  </div>
+  <Cta />
+</BaseLayout>

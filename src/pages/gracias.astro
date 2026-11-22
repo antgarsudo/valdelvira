@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { NEGOCIO } from '../data/negocio';
+---
+<BaseLayout title="Solicitud recibida | Valdelvira Abogados" description="Hemos recibido su solicitud de cita. Le llamaremos en horario de despacho. Si es urgente, llame al 954 72 52 12." path="/gracias/" noindex>
+  <section class="section center">
+    <div class="wrap">
+      <h1 class="t-headline">Gracias. Hemos recibido su solicitud.</h1>
+      <p class="t-sub mt-s">Le llamaremos en horario de despacho ({NEGOCIO.horarioCorto}). Si su caso es urgente, llámenos ahora.</p>
+      <div class="btn-row mt-m">
+        <a class="btn" href={`tel:${NEGOCIO.tel}`}>Llamar al {NEGOCIO.telefono}</a>
+        <a class="btn btn--ghost" href="/que-debo-hacer-en-caso-de-tener-un-accidente-de-trafico/">Qué hacer tras un accidente</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

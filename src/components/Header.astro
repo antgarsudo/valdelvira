@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.webp';
+import Icon from './Icon.astro';
+import { NEGOCIO, MENU_TRAFICO, MENU_OTROS } from '../data/negocio';
+const path = Astro.url.pathname;
+const cur = (h: string) => (path === h ? 'page' : undefined);
+---
+<header class="nav">
+  <div class="nav__in wide">
+    <a class="nav__logo" href="/" aria-label={`${NEGOCIO.nombre}, inicio`}>
+      <Image src={logo} alt="" width={47} height={30} loading="eager" />
+      <span>{NEGOCIO.nombre}</span>
+    </a>
+    <ul class="nav__links">
+      <li>
+        <details class="dd" name="nav">
+          <summary>Tráfico</summary>
+          <div class="dd__panel">
+            {MENU_TRAFICO.map((l, i) => <a href={l.href} class={i === 0 ? 'is-main' : undefined} aria-current={cur(l.href)}>{l.label}</a>)}
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="dd" name="nav">
+          <summary>Otros servicios</summary>
+          <div class="dd__panel">
+            {MENU_OTROS.map((l) => <a href={l.href} aria-current={cur(l.href)}>{l.label}</a>)}
+            <a href="/servicios/" class="is-main">Todos los servicios</a>
+          </div>
+        </details>
+      </li>
+      <li><a href="/despacho/" aria-current={cur('/despacho/')}>El despacho</a></li>
+      <li><a href="/blog/" aria-current={cur('/blog/')}>Blog</a></li>
+      <li><a class="nav__search" href="/buscar/" aria-label="Buscar en la web"><Icon name="search" /></a></li>
+      <li><a class="nav__tel" href={`tel:${NEGOCIO.tel}`}><Icon name="phone" /><span>{NEGOCIO.telefono}</span></a></li>
+      <li><a class="btn btn--sm" href="/solicitar-cita/">Pedir cita</a></li>
+    </ul>
+    <details class="menu">
+      <summary aria-label="Abrir menú"><span></span></summary>
+      <nav class="menu__panel" aria-label="Menú principal">
+        <h2>Tráfico</h2>
+        <ul>{MENU_TRAFICO.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+        <h2>Otros servicios</h2>
+        <ul>{MENU_OTROS.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+        <h2>Despacho</h2>
+        <ul>
+          <li><a href="/despacho/">El despacho</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/buscar/">Buscar</a></li>
+        </ul>
+        <div class="menu__cta">
+          <a class="btn" href={`tel:${NEGOCIO.tel}`}><Icon name="phone" />Llamar al {NEGOCIO.telefono}</a>
+          <a class="btn btn--ghost" href="/solicitar-cita/">Pedir cita</a>
+        </div>
+      </nav>
+    </details>
+    <a class="nav__search menu-search" href="/buscar/" aria-label="Buscar en la web"><Icon name="search" /></a>
+  </div>
+</header>
+<script src="../scripts/menu.ts"></script>

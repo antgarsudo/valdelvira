@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-22T00:00:00Z",
+  "title": "Design System: Valdelvira Abogados",
+  "extensions": {
+    "colorMeta": {
+      "corporate-blue": {
+        "role": "primary",
+        "displayName": "Azul Carpeta",
+        "tonalRamp": [
+          "oklch(15% 0.04 258)",
+          "oklch(25% 0.07 258)",
+          "oklch(35% 0.1 258)",
+          "oklch(45% 0.12 258)",
+          "oklch(58% 0.1 258)",
+          "oklch(72% 0.07 258)",
+          "oklch(85% 0.04 258)",
+          "oklch(95% 0.015 258)"
+        ]
+      },
+      "corporate-blue-deep": {
+        "role": "primary",
+        "displayName": "Azul Carpeta Profundo",
+        "tonalRamp": [
+          "oklch(15% 0.04 258)",
+          "oklch(25% 0.07 258)",
+          "oklch(35% 0.1 258)",
+          "oklch(45% 0.12 258)",
+          "oklch(58% 0.1 258)",
+          "oklch(72% 0.07 258)",
+          "oklch(85% 0.04 258)",
+          "oklch(95% 0.015 258)"
+        ]
+      },
+      "blue-ink": {
+        "role": "primary",
+        "displayName": "Azul Tinta",
+        "tonalRamp": [
+          "oklch(15% 0.04 258)",
+          "oklch(25% 0.07 258)",
+          "oklch(35% 0.1 258)",
+          "oklch(45% 0.12 258)",
+          "oklch(58% 0.1 258)",
+          "oklch(72% 0.07 258)",
+          "oklch(85% 0.04 258)",
+          "oklch(95% 0.015 258)"
+        ]
+      },
+      "blue-tint": {
+        "role": "primary",
+        "displayName": "Tinte Azul",
+        "tonalRamp": [
+          "oklch(15% 0.04 258)",
+          "oklch(25% 0.07 258)",
+          "oklch(35% 0.1 258)",
+          "oklch(45% 0.12 258)",
+          "oklch(58% 0.1 258)",
+          "oklch(72% 0.07 258)",
+          "oklch(85% 0.04 258)",
+          "oklch(95% 0.015 258)"
+        ]
+      },
+      "blue-mist": {
+        "role": "primary",
+        "displayName": "Bruma Azul",
+        "tonalRamp": [
+          "oklch(15% 0.04 258)",
+          "oklch(25% 0.07 258)",
+          "oklch(35% 0.1 258)",
+          "oklch(45% 0.12 258)",
+          "oklch(58% 0.1 258)",
+          "oklch(72% 0.07 258)",
+          "oklch(85% 0.04 258)",
+          "oklch(95% 0.015 258)"
+        ]
+      },
+      "blue-light": {
+        "role": "primary",
+        "displayName": "Azul Claro",
+        "tonalRamp": [
+          "oklch(15% 0.04 258)",
+          "oklch(25% 0.07 258)",
+          "oklch(35% 0.1 258)",
+          "oklch(45% 0.12 258)",
+          "oklch(58% 0.1 258)",
+          "oklch(72% 0.07 258)",
+          "oklch(85% 0.04 258)",
+          "oklch(95% 0.015 258)"
+        ]
+      },
+      "focus-blue": {
+        "role": "primary",
+        "displayName": "Azul de Foco",
+        "tonalRamp": [
+          "oklch(15% 0.04 258)",
+          "oklch(25% 0.07 258)",
+          "oklch(35% 0.1 258)",
+          "oklch(45% 0.12 258)",
+          "oklch(58% 0.1 258)",
+          "oklch(72% 0.07 258)",
+          "oklch(85% 0.04 258)",
+          "oklch(95% 0.015 258)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Grafito",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Gris Medio",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "field-stroke": {
+        "role": "neutral",
+        "displayName": "Trazo de Campo",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Línea",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Blanco",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "silver-bg": {
+        "role": "neutral",
+        "displayName": "Gris Plata",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "nav-glass": {
+        "role": "neutral",
+        "displayName": "Cristal de Cabecera",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "selection-blue": {
+        "role": "primary",
+        "displayName": "Azul Selección",
+        "tonalRamp": [
+          "oklch(15% 0.04 258)",
+          "oklch(25% 0.07 258)",
+          "oklch(35% 0.1 258)",
+          "oklch(45% 0.12 258)",
+          "oklch(58% 0.1 258)",
+          "oklch(72% 0.07 258)",
+          "oklch(85% 0.04 258)",
+          "oklch(95% 0.015 258)"
+        ]
+      },
+      "map-placeholder": {
+        "role": "neutral",
+        "displayName": "Gris Mapa",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "hairline-nav": {
+        "role": "neutral",
+        "displayName": "Filete de Cabecera",
+        "canonical": "rgb(0 0 0 / .08)",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "hairline-panel": {
+        "role": "neutral",
+        "displayName": "Filete de Panel",
+        "canonical": "rgb(0 0 0 / .06)",
+        "tonalRamp": [
+          "oklch(15% 0.003 286)",
+          "oklch(25% 0.003 286)",
+          "oklch(35% 0.003 286)",
+          "oklch(45% 0.003 286)",
+          "oklch(58% 0.003 286)",
+          "oklch(72% 0.003 286)",
+          "oklch(85% 0.003 286)",
+          "oklch(95% 0.003 286)"
+        ]
+      },
+      "error": {
+        "role": "status",
+        "displayName": "Error",
+        "tonalRamp": [
+          "oklch(15% 0.04 27)",
+          "oklch(25% 0.07 27)",
+          "oklch(35% 0.1 27)",
+          "oklch(45% 0.12 27)",
+          "oklch(58% 0.1 27)",
+          "oklch(72% 0.07 27)",
+          "oklch(85% 0.04 27)",
+          "oklch(95% 0.015 27)"
+        ]
+      },
+      "ok": {
+        "role": "status",
+        "displayName": "Correcto",
+        "tonalRamp": [
+          "oklch(15% 0.04 150)",
+          "oklch(25% 0.07 150)",
+          "oklch(35% 0.1 150)",
+          "oklch(45% 0.12 150)",
+          "oklch(58% 0.1 150)",
+          "oklch(72% 0.07 150)",
+          "oklch(85% 0.04 150)",
+          "oklch(95% 0.015 150)"
+        ]
+      },
+      "warn": {
+        "role": "status",
+        "displayName": "Aviso",
+        "tonalRamp": [
+          "oklch(15% 0.04 55)",
+          "oklch(25% 0.07 55)",
+          "oklch(35% 0.1 55)",
+          "oklch(45% 0.12 55)",
+          "oklch(58% 0.1 55)",
+          "oklch(72% 0.07 55)",
+          "oklch(85% 0.04 55)",
+          "oklch(95% 0.015 55)"
+        ]
+      },
+      "pending-bg": {
+        "role": "status",
+        "displayName": "Pendiente (fondo)",
+        "tonalRamp": [
+          "oklch(15% 0.04 85)",
+          "oklch(25% 0.07 85)",
+          "oklch(35% 0.1 85)",
+          "oklch(45% 0.12 85)",
+          "oklch(58% 0.1 85)",
+          "oklch(72% 0.07 85)",
+          "oklch(85% 0.04 85)",
+          "oklch(95% 0.015 85)"
+        ]
+      },
+      "pending-ink": {
+        "role": "status",
+        "displayName": "Pendiente (texto)",
+        "tonalRamp": [
+          "oklch(15% 0.04 85)",
+          "oklch(25% 0.07 85)",
+          "oklch(35% 0.1 85)",
+          "oklch(45% 0.12 85)",
+          "oklch(58% 0.1 85)",
+          "oklch(72% 0.07 85)",
+          "oklch(85% 0.04 85)",
+          "oklch(95% 0.015 85)"
+        ]
+      },
+      "star": {
+        "role": "status",
+        "displayName": "Estrella",
+        "tonalRamp": [
+          "oklch(15% 0.04 75)",
+          "oklch(25% 0.07 75)",
+          "oklch(35% 0.1 75)",
+          "oklch(45% 0.12 75)",
+          "oklch(58% 0.1 75)",
+          "oklch(72% 0.07 75)",
+          "oklch(85% 0.04 75)",
+          "oklch(95% 0.015 75)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "hero": {
+        "displayName": "Hero",
+        "purpose": "Un solo H1 centrado por portada; en páginas interiores clamp(36px, 5vw, 60px)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "H2 de cada sección, centrado."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Titulares de tercer nivel."
+      },
+      "card-title": {
+        "displayName": "Card title",
+        "purpose": "Títulos de tarjetas, pasos, razones y FAQ (19–21px)."
+      },
+      "subhead": {
+        "displayName": "Subhead",
+        "purpose": "Frase de una línea bajo cada titular."
+      },
+      "prose": {
+        "displayName": "Prose",
+        "purpose": "Cuerpo de servicios y blog, columna de 692px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto base y botones."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Metadatos, dirección, horario."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Etiquetas de campo, enlaces y teléfono de cabecera."
+      },
+      "page-hero": {
+        "displayName": "Page hero",
+        "purpose": "H1 de páginas interiores, alineado a la izquierda."
+      },
+      "lead-card-title": {
+        "displayName": "Lead card title",
+        "purpose": "Titular de la tarjeta de caso destacada."
+      },
+      "section-title": {
+        "displayName": "Section title",
+        "purpose": "H2 de prosa, título de FAQ y títulos de grupo."
+      },
+      "prose-h3": {
+        "displayName": "Prose H3",
+        "purpose": "H3 dentro de la prosa."
+      },
+      "menu-link": {
+        "displayName": "Menu link",
+        "purpose": "Enlaces del menú móvil, nota de valoración, monograma."
+      },
+      "card-title-sm": {
+        "displayName": "Card title small",
+        "purpose": "Pasos, razones, otros servicios, relacionados, lateral."
+      },
+      "faq-answer": {
+        "displayName": "FAQ answer",
+        "purpose": "Respuestas de la FAQ."
+      },
+      "body-sm": {
+        "displayName": "Body small",
+        "purpose": "Razones, proceso y tablas."
+      },
+      "card-body": {
+        "displayName": "Card body",
+        "purpose": "Texto de tarjetas, autoría, lateral y desplegable."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Migas, pie, metadatos del blog, grupos del menú."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient",
+        "value": "0 2px 6px rgb(0 0 0 / .04), 0 12px 32px rgb(0 0 0 / .06)",
+        "purpose": "Hover de tarjetas y panel de formulario sobre banda blanca."
+      },
+      {
+        "name": "dropdown",
+        "value": "0 10px 40px rgb(0 0 0 / .14)",
+        "purpose": "Panel desplegable de la cabecera."
+      },
+      {
+        "name": "floating",
+        "value": "0 8px 30px rgb(0 0 0 / .16)",
+        "purpose": "Barra fija de llamada en móvil."
+      },
+      {
+        "name": "field-focus",
+        "value": "0 0 0 4px rgb(39 79 138 / .18)",
+        "purpose": "Halo de campos enfocados."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.22, 1, .36, 1)",
+        "purpose": "Curva única de todas las transiciones."
+      },
+      {
+        "name": "state",
+        "value": ".2s",
+        "purpose": "Cambios de color en botones y campos."
+      },
+      {
+        "name": "lift",
+        "value": ".4s",
+        "purpose": "Subida de 2–3px y sombra en hover de tarjetas."
+      },
+      {
+        "name": "image-zoom",
+        "value": ".5s scale(1.02)",
+        "purpose": "Hover de imágenes de otros servicios."
+      },
+      {
+        "name": "reveal",
+        "value": "translateY(28px) → 0, animation-timeline: view(), entry 0–40%",
+        "purpose": "Aparición al hacer scroll, solo sin preferencia de movimiento reducido."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "callbar",
+        "value": "760px"
+      },
+      {
+        "name": "layout-stack",
+        "value": "960px"
+      },
+      {
+        "name": "nav-collapse",
+        "value": "1060px"
+      },
+      {
+        "name": "split-stack",
+        "value": "860px"
+      },
+      {
+        "name": "mobile",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Píldora azul sólida; siempre la acción Llamar.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Llamar al 954 72 52 12</a>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 24px; border-radius:980px; border:1px solid transparent; background:#274f8a; color:#fff; font:400 17px/1.2 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; letter-spacing:-0.022em; text-decoration:none; transition: background-color .2s cubic-bezier(.22, 1, .36, 1); } .ds-btn:hover { background:#1e3f70; } .ds-btn:focus-visible { outline:3px solid #4d7cc4; outline-offset:3px; }"
+    },
+    {
+      "name": "Botón contorno",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Acción secundaria (Pedir cita); se rellena de azul en hover.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Pedir cita</a>",
+      "css": ".ds-btn-ghost { display:inline-flex; align-items:center; min-height:48px; padding:12px 24px; border-radius:980px; border:1px solid #274f8a; background:transparent; color:#274f8a; font:400 17px/1.2 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; letter-spacing:-0.022em; text-decoration:none; transition: background-color .2s cubic-bezier(.22, 1, .36, 1), color .2s cubic-bezier(.22, 1, .36, 1); } .ds-btn-ghost:hover { background:#274f8a; color:#fff; } .ds-btn-ghost:focus-visible { outline:3px solid #4d7cc4; outline-offset:3px; }"
+    },
+    {
+      "name": "Tarjeta de caso",
+      "kind": "card",
+      "refersTo": "case-card",
+      "description": "Tarjeta plana gris plata; blanca con sombra ambiente en hover.",
+      "html": "<a class=\"ds-case\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"5.5\" cy=\"16\" r=\"3.2\"/><circle cx=\"18.5\" cy=\"16\" r=\"3.2\"/><path d=\"M5.5 16h5l3-5.5h-4M13.5 10.5 16 7h2.5M15.2 9l3.3 7\"/></svg><h3>Accidentes de moto</h3><p>Lesiones graves, equipamiento y reclamación completa.</p><span class=\"ds-arrow\">Ver más</span></a>",
+      "css": ".ds-case { display:flex; flex-direction:column; gap:10px; padding:28px 26px 26px; min-height:220px; max-width:260px; background:#f5f5f7; border-radius:18px; color:#1d1d1f; text-decoration:none; font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; transition: transform .4s cubic-bezier(.22, 1, .36, 1), box-shadow .4s cubic-bezier(.22, 1, .36, 1), background-color .4s cubic-bezier(.22, 1, .36, 1); } .ds-case:hover { background:#fff; transform:translateY(-3px); box-shadow:0 2px 6px rgb(0 0 0 / .04), 0 12px 32px rgb(0 0 0 / .06); } .ds-case svg { width:34px; height:34px; color:#274f8a; } .ds-case h3 { margin:0; font-size:21px; font-weight:600; line-height:1.2; } .ds-case p { margin:0; font-size:15px; color:#424245; } .ds-arrow { margin-top:auto; font-size:15px; color:#274f8a; } .ds-arrow::after { content:''; display:inline-block; width:7px; height:7px; border:solid currentColor; border-width:1.5px 1.5px 0 0; transform:rotate(45deg); margin-left:6px; }"
+    },
+    {
+      "name": "Tarjeta de caso destacada",
+      "kind": "card",
+      "refersTo": "case-card-lead",
+      "description": "Tarjeta azul 2×2 que encabeza la rejilla de casos.",
+      "html": "<a class=\"ds-lead\" href=\"#\"><h3>Accidentes de coche e indemnizaciones</h3><p>Reclamamos las lesiones, las secuelas y los daños del vehículo.</p></a>",
+      "css": ".ds-lead { display:flex; flex-direction:column; justify-content:flex-end; gap:10px; min-height:320px; max-width:520px; padding:36px; border-radius:18px; background:#274f8a; color:#fff; text-decoration:none; font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; } .ds-lead h3 { margin:0; font-size:36px; font-weight:600; line-height:1.1; } .ds-lead p { margin:0; color:#dbe6f6; font-size:17px; max-width:36ch; }"
+    },
+    {
+      "name": "Campo de formulario",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo de 50px, radio 12px, halo azul al enfocar.",
+      "html": "<label class=\"ds-field\"><span>Nombre</span><input type=\"text\" placeholder=\"Su nombre\"></label>",
+      "css": ".ds-field { display:grid; gap:6px; max-width:340px; font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; } .ds-field span { font-size:14px; font-weight:600; color:#1d1d1f; } .ds-field input { min-height:50px; padding:12px 16px; border:1px solid #86868b; border-radius:12px; background:#fff; font:400 17px/1.35 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; color:#1d1d1f; caret-color:#274f8a; transition:border-color .2s, box-shadow .2s; } .ds-field input:focus { outline:none; border-color:#274f8a; box-shadow:0 0 0 4px rgb(39 79 138 / .18); }"
+    },
+    {
+      "name": "Cabecera",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Cabecera fina de cristal translúcido con teléfono y píldora pequeña.",
+      "html": "<nav class=\"ds-nav\"><strong>Valdelvira Abogados</strong><a href=\"#\">Tráfico</a><a href=\"#\">El despacho</a><a href=\"#\" class=\"ds-tel\">954 72 52 12</a><a href=\"#\" class=\"ds-sm\">Pedir cita</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:18px; height:52px; padding:0 22px; background:rgb(251 251 253 / .82); backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid rgb(0 0 0 / .08); font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; font-size:14px; } .ds-nav strong { font-size:15px; margin-right:auto; } .ds-nav a { color:#1d1d1f; text-decoration:none; } .ds-nav a:hover { color:#274f8a; } .ds-tel { font-weight:600; } .ds-sm { min-height:36px; display:inline-flex; align-items:center; padding:7px 16px; border-radius:980px; background:#274f8a; color:#fff !important; } .ds-sm:hover { background:#1e3f70; }"
+    },
+    {
+      "name": "Barra fija de llamada",
+      "kind": "custom",
+      "refersTo": "callbar",
+      "description": "Píldora flotante en móvil con Llamar y Pedir cita.",
+      "html": "<div class=\"ds-callbar\"><a href=\"#\" class=\"ds-cb ds-cb--solid\">Llamar</a><a href=\"#\" class=\"ds-cb\">Pedir cita</a></div>",
+      "css": ".ds-callbar { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:8px; max-width:360px; border-radius:980px; background:rgb(255 255 255 / .9); backdrop-filter:saturate(180%) blur(20px); box-shadow:0 8px 30px rgb(0 0 0 / .16); font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; } .ds-cb { display:flex; align-items:center; justify-content:center; min-height:48px; border-radius:980px; border:1px solid #274f8a; color:#274f8a; text-decoration:none; font-size:17px; } .ds-cb--solid { background:#274f8a; color:#fff; } .ds-cb:hover { background:#1e3f70; color:#fff; }"
+    },
+    {
+      "name": "Banda CTA azul",
+      "kind": "custom",
+      "refersTo": "cta",
+      "description": "Cierre a ancho completo en azul con teléfono como cifra de display.",
+      "html": "<section class=\"ds-cta\"><h2>Cuéntenos su caso.</h2><p>Llame en horario de despacho o pida cita.</p><a class=\"ds-cta-tel\" href=\"#\">954 72 52 12</a><a class=\"ds-white\" href=\"#\">Llamar ahora</a></section>",
+      "css": ".ds-cta { padding:64px 24px; text-align:center; background:#274f8a; color:#fff; font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; } .ds-cta h2 { margin:0; font-size:40px; font-weight:600; line-height:1.08; } .ds-cta p { margin:16px auto 0; color:#dbe6f6; font-size:19px; } .ds-cta-tel { display:block; margin:22px 0; font-size:44px; font-weight:600; color:#fff; text-decoration:none; font-variant-numeric:tabular-nums; } .ds-white { display:inline-flex; min-height:48px; align-items:center; padding:12px 24px; border-radius:980px; background:#fff; color:#274f8a; text-decoration:none; } .ds-white:hover { background:#eaf0f8; }"
+    },
+    {
+      "name": "Marcador pendiente",
+      "kind": "custom",
+      "refersTo": "pending-marker",
+      "description": "Resaltado temporal de datos que la abogada debe confirmar.",
+      "html": "<p class=\"ds-p\">Años de ejercicio: <span class=\"ds-pending\">[PENDIENTE: años de ejercicio]</span></p>",
+      "css": ".ds-p { font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Arial, sans-serif; font-size:17px; color:#424245; } .ds-pending { background:#fff4d6; color:#6b4a00; border-radius:4px; padding:0 4px; font-size:.82em; font-weight:600; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El escaparate del despacho",
+    "overview": "**Creative North Star: \"El escaparate del despacho\"**\n\nUna web de despacho local construida con la disciplina de una página de producto de apple.com: un mensaje por pantalla, tipografía grande y precisa, fotos reales del despacho a gran tamaño y el teléfono siempre a un toque. La página alterna bandas blancas y gris plata a ancho completo; cada pantalla tiene un titular centrado, un subtítulo de una línea y, como mucho, dos botones píldora. El azul corporativo de las carpetas y el rótulo del despacho es la única voz de color.\n\nLa densidad es baja y el ritmo es vertical: secciones de 64 a 120px de relleno, rejillas de tarjetas sin borde separadas por 20px y una sola banda azul a ancho completo por página (proceso o llamada a la acción). La profundidad es casi nula; las tarjetas se distinguen por el tono de fondo, no por sombras ni líneas. Los iconos son de trazo propio de 1,5px en 24×24.\n\nSe rechaza explícitamente el cliché jurídico: dorado, tipografía serif, balanza, mazo, fotos de stock de apretones de manos.",
+    "keyCharacteristics": [
+      "Bandas alternas blanco / gris plata (#f5f5f7) a ancho completo; una banda azul por página.",
+      "Pila SF Pro con Inter autoalojada como sustituto (400 / 600 / 700), display a peso 600 con tracking negativo.",
+      "Botones píldora (980px) de 48px de alto; nunca esquinas rectas en acciones.",
+      "Imágenes y paneles grandes con radio 28px; tarjetas con radio 18px; campos con 12px.",
+      "Sombra única, difusa y casi invisible, solo como respuesta al hover o en paneles flotantes.",
+      "Teléfono pulsable en cabecera, en la banda azul de cierre y en la barra fija móvil."
+    ],
+    "rules": [
+      {
+        "name": "The One Voice Rule",
+        "body": "El azul corporativo es el único color de acento. Nada de dorados, verdes de marca ni degradados; los colores de estado solo aparecen en estados.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Blue Band Rule",
+        "body": "Cada página tiene como mucho una sección a ancho completo en azul. Sobre ella el texto es blanco o Bruma Azul y los botones pasan a la variante blanca.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight-Not-Case Rule",
+        "body": "La jerarquía se construye con tamaño y peso 600. Sin versalitas, sin mayúsculas con tracking y sin antetítulos sobre los titulares.",
+        "section": "typography"
+      },
+      {
+        "name": "The Phone-As-Display Rule",
+        "body": "El teléfono se compone como cifra de display (600, clamp(32px, 5vw, 48px), `tabular-nums`) en la banda de cierre y en el bloque de cita; es un enlace `tel:`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-At-Rest Rule",
+        "body": "Las tarjetas no tienen sombra ni borde en reposo; se separan por tono. La sombra Ambiente solo llega con el hover.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Glass Rule",
+        "body": "Solo lo que flota sobre el contenido (cabecera, barra de llamada) usa cristal: blanco al 82–90% con `saturate(180%) blur(20px)`.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** alternar bandas blancas y gris plata (#f5f5f7) y dar a las tarjetas el tono contrario a su banda.",
+      "**Do** usar píldoras de 48px para toda acción, con «Llamar» siempre en azul sólido y «Pedir cita» en contorno.",
+      "**Do** mantener un titular centrado a peso 600 con tracking negativo y un subtítulo de una línea por sección.",
+      "**Do** mostrar fotos reales del despacho a gran tamaño con radio 28px.",
+      "**Do** dibujar iconos de trazo propio de 1,5px en 24×24 con `currentColor`, en azul sobre claro y blanco sobre azul.",
+      "**Do** componer teléfonos, horarios y cifras con `tabular-nums`.",
+      "**Do** marcar cualquier dato no confirmado con el marcador pendiente en lugar de inventarlo.",
+      "**Do** condicionar todo movimiento a `prefers-reduced-motion: no-preference`, con el contenido visible por defecto."
+    ],
+    "donts": [
+      "**Don't** usar dorado, tipografía serif, balanzas, mazos ni fotos de stock de apretones de manos.",
+      "**Don't** añadir un segundo color de acento ni más de una banda azul por página.",
+      "**Don't** poner sombra ni borde a tarjetas en reposo.",
+      "**Don't** usar esquinas rectas en botones, imágenes o tarjetas.",
+      "**Don't** poner antetítulos o etiquetas en mayúsculas sobre los titulares.",
+      "**Don't** usar el amarillo del marcador pendiente para nada que no sea contenido pendiente."
+    ]
+  }
+}

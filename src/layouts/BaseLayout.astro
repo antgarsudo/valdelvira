@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import type { Crumb } from '../lib/schema';
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  noindex?: boolean;
+  crumbs?: Crumb[];
+  schema?: object[];
+  type?: 'website' | 'article';
+  image?: ImageMetadata;
+}
+const props = Astro.props;
+const crumbs = props.crumbs ?? [];
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fbfbfd" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <SEO {...props} crumbs={crumbs} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <Header />
+    {crumbs.length > 1 && <Breadcrumbs items={crumbs} />}
+    <main id="contenido">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

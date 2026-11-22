@@ -1,0 +1,12 @@
+---
+import { NEGOCIO, fecha } from '../data/negocio';
+interface Props { updated: Date; trafico?: boolean }
+const { updated, trafico = true } = Astro.props;
+---
+<aside class="author" aria-label="Autoría y revisión">
+  <div class="author__mono" aria-hidden="true">SV</div>
+  <div>
+    <p><strong><a href="/despacho/">{NEGOCIO.abogada}</a></strong></p>
+    <p>Abogada colegiada nº {NEGOCIO.colegiada}{trafico ? ', especialista en derecho de tráfico y reclamación de indemnizaciones' : ''}. Texto actualizado el <time datetime={updated.toISOString().slice(0, 10)}>{fecha(updated)}</time>. <span class="pending">[PENDIENTE: revisión y firma de la abogada]</span></p>
+  </div>
+</aside>
