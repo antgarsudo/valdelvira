@@ -1,0 +1,11 @@
+// Demo para la clienta en Cloudflare: solo sirve los archivos estáticos de dist/ (sin adaptador ni Worker).
+// Las cabeceras y las 301 van en dist/_headers y dist/_redirects, que genera scripts/postbuild.mjs.
+{
+  "name": "valdelvira",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

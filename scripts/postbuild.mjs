@@ -15,8 +15,8 @@ const titles = new Map(), descs = new Map();
 const emailRe = /[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}/;
 const LEGAL = ['/aviso-legal/', '/politica-de-privacidad/', '/politica-de-cookies/', '/declaracion-de-accesibilidad/'];
 const VERIFY = /^\/google[0-9a-f]+\.html$/;
-// demo = copia de revisión para la clienta en Cloudflare Pages (CF_PAGES lo define Cloudflare al compilar).
-const demo = process.env.DEPLOY_TARGET === 'demo' || !!process.env.CF_PAGES;
+// demo = copia de revisión para la clienta en Cloudflare Pages (Cloudflare define CF_PAGES en Pages y WORKERS_CI en Workers Builds).
+const demo = process.env.DEPLOY_TARGET === 'demo' || !!process.env.CF_PAGES || !!process.env.WORKERS_CI;
 const preview = process.env.DEPLOY_TARGET === 'preview' || demo;
 let pendientes = 0, verificar = 0;
 

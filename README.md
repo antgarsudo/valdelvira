@@ -43,7 +43,7 @@ Ver la lista de comprobación de `PENDIENTES.md` (Search Console, sitemap, 301, 
 
 ## Demo para la clienta (Cloudflare Pages)
 
-Cloudflare Pages se usa solo como copia de revisión, no como web definitiva. Al compilar allí (Cloudflare define `CF_PAGES`), el build:
+Cloudflare Pages se usa solo como copia de revisión, no como web definitiva. Al compilar allí (Cloudflare define `CF_PAGES` o `WORKERS_CI`), el build:
 
 - pone `noindex` en todas las páginas y cierra el `robots.txt`;
 - genera `_headers` (CSP y cabeceras de seguridad) y `_redirects` con las 301;
@@ -52,7 +52,7 @@ Cloudflare Pages se usa solo como copia de revisión, no como web definitiva. Al
 
 El formulario no envía mensajes en la demo. En local se prueba con `npm run build:demo`.
 
-Configuración en Cloudflare: Workers & Pages → Create → Pages → Connect to Git, con estos datos:
+Configuración en Cloudflare (Workers o Pages, conectado a Git). `wrangler.jsonc` sirve `dist/` como sitio estático, sin adaptador. Datos:
 
 - Repositorio: `antgarsudo/valdelvira`.
 - Framework preset: Astro.

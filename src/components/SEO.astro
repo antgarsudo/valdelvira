@@ -15,7 +15,7 @@ interface Props {
 }
 const { title, description, path, noindex = false, crumbs = [], schema = [], type = 'website', image } = Astro.props;
 // Previsualización, demo (DEPLOY_TARGET=demo) o Cloudflare Pages (CF_PAGES): todo noindex.
-const preview = ['preview', 'demo'].includes(process.env.DEPLOY_TARGET ?? '') || !!process.env.CF_PAGES;
+const preview = ['preview', 'demo'].includes(process.env.DEPLOY_TARGET ?? '') || !!process.env.CF_PAGES || !!process.env.WORKERS_CI;
 const canonical = new URL(path, SITE_URL).href;
 const og = await getImage({ src: image ?? ogSrc, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 80 });
 const ogUrl = new URL(og.src, SITE_URL).href;
