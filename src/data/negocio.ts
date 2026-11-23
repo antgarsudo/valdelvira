@@ -26,12 +26,11 @@ export const NEGOCIO = {
   },
   geo: { lat: 37.2937084, lng: -5.9217367 },
   mapsUrl: 'https://maps.app.goo.gl/QrJDUfFVpeaLws558',
-  // Horario de la ficha de Google Business Profile (consultada el 22/11/2026).
+  // Horario confirmado por el cliente (23/11/2026).
   horario: [
-    { dias: ['Monday', 'Tuesday', 'Wednesday', 'Friday'], etiqueta: 'Lunes, martes, miércoles y viernes', abre: '10:00', cierra: '14:30' },
-    { dias: ['Thursday'], etiqueta: 'Jueves', abre: '10:30', cierra: '14:30' },
+    { dias: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], etiqueta: 'Lunes a viernes', abre: '10:00', cierra: '14:30' },
   ],
-  horarioCorto: 'L, M, X y V 10:00–14:30 · J 10:30–14:30',
+  horarioCorto: 'Lunes a viernes de 10:00 a 14:30',
   zonas: ['Dos Hermanas', 'Montequinto', 'Alcalá de Guadaíra', 'Utrera', 'Los Palacios y Villafranca', 'Coria del Río', 'Sevilla'],
   valoracionGoogle: { nota: '5,0', opiniones: 4 },
 } as const;

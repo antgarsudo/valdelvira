@@ -26,7 +26,7 @@ Al revisar, borre el marcador del texto (o corríjalo) y cambie `updated:` en el
 
 ## 3. Decisiones tomadas sin el cliente (revisables)
 
-- Horario y coordenadas: de la ficha de Google (consultada el 22/11/2026). Horario: L, M, X y V 10:00–14:30; J 10:30–14:30.
+- Horario y coordenadas: de la ficha de Google (consultada el 22/11/2026). Horario confirmado por el cliente el 23/11/2026: lunes a viernes de 10:00 a 14:30 (la ficha de Google decía jueves desde las 10:30: conviene igualarla).
 - Sin banner de cookies: la web no instala ninguna. El mapa de Google solo se carga si el visitante pulsa «Cargar mapa» (consentimiento en el momento).
 - Remitente de los correos del formulario: no-responder@valdelvira-abogados.com (crear el buzón o alias si el hosting lo exige; revisar SPF/DKIM).
 - H1 de las subpáginas de tráfico con «en Dos Hermanas», según la estrategia geográfica del brief (la tabla del brief los daba sin localidad).
