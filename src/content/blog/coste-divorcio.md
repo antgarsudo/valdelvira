@@ -88,6 +88,6 @@ Si sus ingresos no superan los límites de la Ley 1/1996 de asistencia jurídica
 
 ## Cómo le ayudamos en Valdelvira Abogados
 
-En Valdelvira Abogados le explicamos qué vía encaja con su situación y qué gastos va a tener antes de empezar, con una primera consulta gratuita [VERIFICAR: confirmar que se mantiene]. Puede ver más en nuestra página de [abogados de familia y divorcio](/abogados-familia/) y, si al divorciarse también tiene que resolver una herencia pendiente o el reparto de bienes heredados, en la de [abogados de herencias](/abogados-herencias/).
+En Valdelvira Abogados le explicamos qué vía encaja con su situación y qué gastos va a tener antes de empezar. Puede ver más en nuestra página de [abogados de familia y divorcio](/abogados-familia/) y, si al divorciarse también tiene que resolver una herencia pendiente o el reparto de bienes heredados, en la de [abogados de herencias](/abogados-herencias/).
 
 El despacho está en Dos Hermanas y atiende a clientes de Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios y Villafranca, Coria del Río y Sevilla capital. Aunque nuestra principal especialidad son los [accidentes de tráfico](/abogados-accidentes-trafico/), llevamos también asuntos de familia con la misma atención personal.

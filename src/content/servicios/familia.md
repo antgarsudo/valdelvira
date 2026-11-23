@@ -92,7 +92,7 @@ Puede hacerse de mutuo acuerdo, con un nuevo convenio, o de forma contenciosa. M
 
 El proceso con nosotros empieza por escucharle y termina cuando la sentencia o la escritura está firme e inscrita. Estos son los pasos habituales:
 
-1. **Primera consulta**: estudiamos su situación familiar y económica y le explicamos las opciones. Ofrecemos primera consulta gratuita [VERIFICAR: confirmar que se mantiene].
+1. **Primera consulta**: estudiamos su situación familiar y económica y le explicamos las opciones.
 2. **Negociación**: preparamos una propuesta de convenio y hablamos con la otra parte o con su abogado.
 3. **Presentación**: si hay acuerdo, presentamos la demanda de mutuo acuerdo o preparamos la firma ante notario; si no lo hay, la demanda contenciosa.
 4. **Juicio o ratificación**: le acompañamos a la ratificación del convenio o a la vista.

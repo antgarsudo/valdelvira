@@ -150,4 +150,4 @@ Atendemos en nuestro despacho de Dos Hermanas a clientes de Montequinto, Alcalá
 
 Le informamos de los honorarios por escrito antes de empezar, para que sepa desde el principio cuánto le va a costar la reclamación. [PENDIENTE: confirmar si se cobra un porcentaje sobre la indemnización obtenida, una cantidad fija o un sistema mixto.]
 
-La primera consulta es gratuita [VERIFICAR: confirmar que se mantiene]. En ella revisamos su documentación, le explicamos qué puede reclamar y comprobamos si su póliza incluye defensa jurídica, que en muchos casos cubre total o parcialmente los honorarios del abogado que usted elija. Puede [pedir cita en el despacho](/solicitar-cita/) o llamarnos al 954 72 52 12.
+En la primera consulta revisamos su documentación, le explicamos qué puede reclamar y comprobamos si su póliza incluye defensa jurídica, que en muchos casos cubre total o parcialmente los honorarios del abogado que usted elija. Puede [pedir cita en el despacho](/solicitar-cita/) o llamarnos al 954 72 52 12.

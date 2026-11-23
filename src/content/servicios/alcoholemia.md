@@ -101,4 +101,4 @@ Las penas que suelen barajarse son [VERIFICAR]:
 
 Le ayudamos desde el primer momento: revisamos el atestado, le acompañamos al juzgado de guardia y le explicamos si conviene la conformidad o el juicio. [PENDIENTE: confirmar que la abogada lleva defensa penal en materia de tráfico y si atiende guardias fuera de horario].
 
-Atendemos a clientes de Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios y Villafranca, Coria del Río y Sevilla capital. Si tiene una citación, [pida cita con la abogada](/solicitar-cita/) cuanto antes; la primera consulta es gratuita [VERIFICAR: confirmar que se mantiene].
+Atendemos a clientes de Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios y Villafranca, Coria del Río y Sevilla capital. Si tiene una citación, [pida cita con la abogada](/solicitar-cita/) cuanto antes.

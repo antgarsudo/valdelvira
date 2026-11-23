@@ -97,4 +97,4 @@ Acompañamos a las familias con un trato cercano y discreto, adaptándonos a sus
 
 En la práctica, esto significa que una sola persona de la familia puede ser nuestro interlocutor, que les explicamos cada propuesta de la aseguradora con calma y por escrito, y que ninguna decisión se toma sin que todos los perjudicados la entiendan. Si hay menores o personas mayores entre los afectados, cuidamos especialmente que sus derechos queden protegidos.
 
-Atendemos a familias de Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios y Villafranca, Coria del Río y Sevilla capital, y tramitamos reclamaciones en toda España. Si lo desea, puede [pedir cita con la abogada](/solicitar-cita/) cuando le venga bien; la primera consulta es gratuita [VERIFICAR: confirmar que se mantiene].
+Atendemos a familias de Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios y Villafranca, Coria del Río y Sevilla capital, y tramitamos reclamaciones en toda España. Si lo desea, puede [pedir cita con la abogada](/solicitar-cita/) cuando le venga bien.

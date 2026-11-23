@@ -7,7 +7,7 @@ Los marcadores se ven resaltados en amarillo en la web y `npm run build` los cue
 1. **Colegio** de la colegiación nº 11326 (se ha puesto «Ilustre Colegio de Abogados de Sevilla» provisionalmente; cambiar en `src/data/negocio.ts`).
 2. **Biografía**, años de ejercicio, formación específica en tráfico / responsabilidad civil / valoración del daño corporal y tipos de casos llevados (portada, `/despacho/`, `/abogados-accidentes-trafico/`). Casos anonimizados solo con autorización.
 3. **Foto profesional** de la abogada (y, si se quiere, de la fachada). Hoy no existe ninguna; se usan fotos del interior del despacho.
-4. **Honorarios**: ¿cobro a éxito en accidentes? ¿primera consulta gratuita? (la web antigua decía «Primera cita gratis»; se ha mantenido con `[VERIFICAR]`). Honorarios de multas, divorcio y familia.
+4. **Honorarios**: ¿cobro a éxito en accidentes? La web no dice que la primera consulta sea gratuita (se retiró a petición del cliente, 23/11/2026). Honorarios de multas, divorcio y familia.
 5. **Defensa penal en tráfico** (alcoholemia, juicios rápidos, guardias). Se han creado `/abogado-alcoholemia-delitos-trafico/` y el artículo del juicio rápido: si no la lleva, eliminar ambos archivos y quitar los enlaces del menú (`src/data/negocio.ts`).
 6. **Desahucios**: ¿defiende también a inquilinos?
 7. **Cláusula suelo**: ¿se siguen llevando? (`/reclame-clausula-suelo/` redirige a `/derecho-civil/`).

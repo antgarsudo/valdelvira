@@ -101,4 +101,4 @@ La reclamación previa interrumpe ese plazo, y la solicitud de informe al Instit
 
 Le ayudamos preparando la reclamación previa, revisando cada concepto de la oferta y negociando con la compañía. Si no se alcanza un acuerdo, presentamos la demanda en el juzgado que corresponda.
 
-Atendemos a clientes de Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios y Villafranca, Coria del Río y Sevilla capital, y llevamos reclamaciones en toda España. Puede [pedir cita con la abogada](/solicitar-cita/) para revisar la oferta que le han hecho; la primera consulta es gratuita [VERIFICAR: confirmar que se mantiene].
+Atendemos a clientes de Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios y Villafranca, Coria del Río y Sevilla capital, y llevamos reclamaciones en toda España. Puede [pedir cita con la abogada](/solicitar-cita/) para revisar la oferta que le han hecho.

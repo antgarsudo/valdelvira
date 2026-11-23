@@ -98,4 +98,4 @@ Como las fechas dependen de cada caso, conviene revisar el calendario con un abo
 
 Le ayudamos revisando sus informes médicos, comprobando que se cumplen los criterios del baremo y preparando una reclamación completa, con todos los conceptos indemnizables. Si la lesión es discutida, coordinamos la valoración pericial con un médico especialista en valoración del daño corporal [PENDIENTE: confirmar si el despacho trabaja con peritos médicos concretos].
 
-Atendemos a clientes de Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios y Villafranca, Coria del Río y Sevilla capital, y llevamos asuntos en toda España. Puede [pedir cita con la abogada](/solicitar-cita/) para que revise su caso; la primera consulta es gratuita [VERIFICAR: confirmar que se mantiene].
+Atendemos a clientes de Dos Hermanas, Montequinto, Alcalá de Guadaíra, Utrera, Los Palacios y Villafranca, Coria del Río y Sevilla capital, y llevamos asuntos en toda España. Puede [pedir cita con la abogada](/solicitar-cita/) para que revise su caso.
