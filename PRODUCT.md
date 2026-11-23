@@ -13,7 +13,7 @@ Astro 7 en modo estático (`output: 'static'`, TypeScript, sin frameworks de cli
 ## Users
 
 - **Persona que acaba de tener un accidente de tráfico** (coche, moto, atropello, bici o patinete) en Dos Hermanas, Montequinto o alrededores. Busca en el móvil, a menudo con dolor o de baja, con la aseguradora llamando. Quiere saber si tiene derecho a reclamar, cuánto tarda y si puede hablar hoy con alguien. Acción: llamar o pedir cita.
-- **Conductor con una multa, pérdida de puntos o una alcoholemia** que necesita saber plazos y si merece la pena recurrir o cómo afrontar un juicio rápido.
+- **Conductor con una alcoholemia o un delito de tráfico** que necesita saber cómo afrontar un juicio rápido.
 - **Secundarios:** personas que se divorcian, heredan, tienen un inquilino que no paga o una deuda que cobrar en la zona.
 
 ## Product Purpose
@@ -33,7 +33,7 @@ Abogada especialista en derecho de tráfico con despacho propio en Dos Hermanas:
 
 ## Capabilities and Constraints
 
-- Servicios: accidentes de tráfico (coche, moto, atropello, bici/patinete, latigazo cervical, fallecimiento, reclamación a la aseguradora), alcoholemia y delitos de tráfico, multas y puntos, familia, herencias, desahucios, derecho civil.
+- Servicios: accidentes de tráfico (coche, moto, atropello, bici/patinete, latigazo cervical, fallecimiento, reclamación a la aseguradora), alcoholemia y delitos de tráfico, familia, herencias, desahucios, derecho civil.
 - Rigor jurídico: no prometer resultados ni cuantías; cifras legales marcadas `[VERIFICAR]` para revisión de la abogada.
 - Pendientes que no se inventan: años de ejercicio, biografía, formación, foto de la abogada, honorarios, reseñas publicables, equipo, si defiende inquilinos, cláusula suelo.
 

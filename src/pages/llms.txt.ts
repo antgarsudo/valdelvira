@@ -14,7 +14,7 @@ export const GET: APIRoute = async () => {
   const horario = NEGOCIO.horario.map((h) => `${h.etiqueta} de ${h.abre} a ${h.cierra}`).join('; ');
   const txt = `# ${NEGOCIO.nombre}
 
-> Despacho de la abogada ${NEGOCIO.abogada} en Dos Hermanas (Sevilla), especializado en derecho de tráfico: reclamación de indemnizaciones por accidente, lesiones y latigazo cervical, reclamaciones a aseguradoras, multas y pérdida de puntos, y alcoholemia y delitos de tráfico. También atiende derecho de familia, herencias, desahucios y derecho civil.
+> Despacho de la abogada ${NEGOCIO.abogada} en Dos Hermanas (Sevilla), especializado en derecho de tráfico: reclamación de indemnizaciones por accidente, lesiones y latigazo cervical, reclamaciones a aseguradoras, y alcoholemia y delitos de tráfico. También atiende derecho de familia, herencias, desahucios y derecho civil.
 
 - Dirección: ${DIRECCION_LINEA}
 - Teléfono: ${NEGOCIO.telefonoIntl}

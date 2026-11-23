@@ -8,10 +8,10 @@ const grupos = [
   { t: 'Otros servicios', items: servicios.filter((s) => s.data.bloque === 'otros') },
 ];
 ---
-<BaseLayout title="Servicios jurídicos en Dos Hermanas | Valdelvira Abogados" description="Servicios de Valdelvira Abogados en Dos Hermanas: accidentes de tráfico, multas, alcoholemia, familia, herencias, desahucios y civil. Llame al 954 72 52 12." path="/servicios/" crumbs={[{ name: 'Inicio', path: '/' }, { name: 'Servicios', path: '/servicios/' }]}>
+<BaseLayout title="Servicios jurídicos en Dos Hermanas | Valdelvira Abogados" description="Servicios de Valdelvira Abogados en Dos Hermanas: accidentes de tráfico, alcoholemia, familia, herencias, desahucios y civil. Llame al 954 72 52 12." path="/servicios/" crumbs={[{ name: 'Inicio', path: '/' }, { name: 'Servicios', path: '/servicios/' }]}>
   <header class="page-head wrap">
     <h1 class="t-hero">Servicios jurídicos</h1>
-    <p class="lead t-sub">La especialidad del despacho es el derecho de tráfico: accidentes, indemnizaciones, multas y delitos de tráfico. También le asesoramos en familia, herencias, alquileres y derecho civil, en Dos Hermanas y Sevilla.</p>
+    <p class="lead t-sub">La especialidad del despacho es el derecho de tráfico: accidentes, indemnizaciones y delitos de tráfico. También le asesoramos en familia, herencias, alquileres y derecho civil, en Dos Hermanas y Sevilla.</p>
   </header>
   {grupos.map((g) => (
     <section class="section" aria-label={g.t}>

@@ -36,7 +36,7 @@ async function run(query: string) {
       return li;
     }));
     status.textContent = scored.length === 0
-      ? `Sin resultados para «${query}». Pruebe con otra palabra, como «accidente», «multa» o «divorcio», o llámenos al 954 72 52 12.`
+      ? `Sin resultados para «${query}». Pruebe con otra palabra, como «accidente», «herencia» o «divorcio», o llámenos al 954 72 52 12.`
       : `${scored.length} ${scored.length === 1 ? 'resultado' : 'resultados'} para «${query}».`;
   } catch {
     status.textContent = 'No se ha podido completar la búsqueda. Inténtelo de nuevo en un momento.';

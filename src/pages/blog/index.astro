@@ -5,11 +5,11 @@ import { getArticulos } from '../../lib/content';
 import { fecha } from '../../data/negocio';
 const articulos = await getArticulos();
 const grupos = [
-  { t: 'Accidentes, multas y tráfico', items: articulos.filter((a) => a.data.categoria === 'trafico') },
+  { t: 'Accidentes y tráfico', items: articulos.filter((a) => a.data.categoria === 'trafico') },
   { t: 'Familia y herencias', items: articulos.filter((a) => a.data.categoria === 'otros') },
 ];
 ---
-<BaseLayout title="Blog de tráfico y accidentes | Valdelvira Abogados" description="Artículos de la abogada Sonia Valdelvira sobre accidentes de tráfico, indemnizaciones, multas y puntos, además de familia y herencias. Dudas: 954 72 52 12." path="/blog/" crumbs={[{ name: 'Inicio', path: '/' }, { name: 'Blog', path: '/blog/' }]}>
+<BaseLayout title="Blog de tráfico y accidentes | Valdelvira Abogados" description="Artículos de la abogada Sonia Valdelvira sobre accidentes de tráfico, indemnizaciones y alcoholemia, además de familia y herencias. Dudas: 954 72 52 12." path="/blog/" crumbs={[{ name: 'Inicio', path: '/' }, { name: 'Blog', path: '/blog/' }]}>
   <header class="page-head wrap">
     <h1 class="t-hero">Blog</h1>
     <p class="lead t-sub">Respuestas claras a las dudas que más nos plantean en el despacho de Dos Hermanas, revisadas por la abogada.</p>

@@ -30,7 +30,7 @@ Como referencia, los límites administrativos generales son [VERIFICAR]:
 - 0,25 mg/l en aire espirado para la mayoría de conductores.
 - 0,15 mg/l para conductores noveles y profesionales.
 
-Superar estas tasas sin llegar al delito supone una multa de 500 o 1.000 euros y la retirada de 4 o 6 puntos, según la tasa [VERIFICAR]. Si su caso es solo administrativo, le interesa más nuestro artículo sobre [cómo recurrir la multa y recuperar los puntos del carnet](/blog/recuperar-puntos-carnet-recurrir-multa/).
+Superar estas tasas sin llegar al delito supone una multa de 500 o 1.000 euros y la retirada de 4 o 6 puntos, según la tasa [VERIFICAR].
 
 También es delito negarse a realizar las pruebas legalmente establecidas (artículo 383 del Código Penal), con penas más graves que las de la propia alcoholemia [VERIFICAR].
 

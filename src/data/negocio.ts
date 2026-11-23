@@ -47,7 +47,6 @@ export const MENU_TRAFICO = [
   { label: 'Fallecimiento en accidente', href: '/abogados-accidentes-trafico/fallecimiento/' },
   { label: 'Reclamación a la aseguradora', href: '/abogados-accidentes-trafico/reclamacion-aseguradora/' },
   { label: 'Alcoholemia y delitos de tráfico', href: '/abogado-alcoholemia-delitos-trafico/' },
-  { label: 'Multas y puntos', href: '/recurso-multas-trafico/' },
 ];
 
 export const MENU_OTROS = [

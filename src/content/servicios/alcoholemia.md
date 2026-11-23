@@ -13,8 +13,8 @@ intro: "Si le han citado a juicio por alcoholemia o por otro delito de tráfico,
 imagen: despacho-carpetas
 imagenAlt: "Expedientes de defensa por alcoholemia y delitos de tráfico en el despacho de Dos Hermanas"
 relacionados:
-  - /recurso-multas-trafico/
   - /abogados-accidentes-trafico/
+  - /abogados-accidentes-trafico/reclamacion-aseguradora/
 updated: 2026-11-22
 faqs:
   - q: "¿A partir de qué tasa de alcohol es delito conducir?"
@@ -41,7 +41,7 @@ Las tasas de referencia son [VERIFICAR todas las cifras]:
 | Noveles y profesionales | 0,15 mg/l | 0,3 g/l | Infracción administrativa |
 | Tasa penal | Más de 0,60 mg/l | Más de 1,2 g/l | Delito (art. 379.2 CP) |
 
-En vía administrativa, la Ley de Tráfico (RDL 6/2015) prevé multas de 500 o 1.000 euros y la pérdida de 4 o 6 puntos según la tasa [VERIFICAR]. Si su caso es solo administrativo, le ayudamos a [recurrir la multa de tráfico y defender sus puntos](/recurso-multas-trafico/).
+En vía administrativa, la Ley de Tráfico (RDL 6/2015) prevé multas de 500 o 1.000 euros y la pérdida de 4 o 6 puntos según la tasa [VERIFICAR].
 
 El delito no depende solo de la cifra. Con una tasa inferior a 0,60 mg/l también puede haber condena si el atestado recoge síntomas claros, como habla pastosa, falta de equilibrio o una conducción errática. Por eso la defensa empieza por revisar cómo se redactó el atestado.
 
@@ -61,7 +61,7 @@ El exceso de velocidad es delito cuando se circula a una velocidad superior en 6
 
 Por ejemplo, circular a más de 110 km/h en una calle limitada a 50, o a más de 200 km/h en una autovía limitada a 120. Las penas son las mismas que en la alcoholemia: prisión de tres a seis meses o multa o trabajos en beneficio de la comunidad, y privación del carnet de uno a cuatro años [VERIFICAR].
 
-En estos casos revisamos el radar: su verificación metrológica, el margen de error aplicado y la identificación del vehículo. Un error en cualquiera de estos puntos puede cambiar el resultado. Si la velocidad no llega al umbral penal, se trata de una multa y nos ocupamos del [recurso de la multa de radar](/recurso-multas-trafico/).
+En estos casos revisamos el radar: su verificación metrológica, el margen de error aplicado y la identificación del vehículo. Un error en cualquiera de estos puntos puede cambiar el resultado. Si la velocidad no llega al umbral penal, se trata de una infracción administrativa, no de un delito.
 
 ## Conducir sin carnet o con el carnet retirado
 

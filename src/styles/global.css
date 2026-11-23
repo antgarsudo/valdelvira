@@ -514,3 +514,6 @@ html, body { overflow-x: clip; }
 /* Menú y barra de llamada opacos: el contenido no se transparenta al pasar por debajo */
 .nav { background: #fbfbfd; -webkit-backdrop-filter: none; backdrop-filter: none; z-index: 60; }
 @media (max-width: 760px) { .callbar { background: #fff; -webkit-backdrop-filter: none; backdrop-filter: none; z-index: 60; } }
+
+/* 7 casos + destacado: la última tarjeta ocupa dos columnas para que la rejilla no quede coja */
+.cases > .case:last-child { grid-column: span 2; }

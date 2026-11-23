@@ -46,7 +46,7 @@ export const organization = (logo: string, image: string) => ({
     { '@type': 'City', name: 'Sevilla' },
   ],
   founder: { '@id': PERSON_ID },
-  knowsAbout: ['Derecho de tráfico', 'Accidentes de tráfico', 'Indemnizaciones por accidente de tráfico', 'Baremo de tráfico', 'Multas de tráfico', 'Derecho de familia', 'Herencias'],
+  knowsAbout: ['Derecho de tráfico', 'Accidentes de tráfico', 'Indemnizaciones por accidente de tráfico', 'Baremo de tráfico', 'Derecho de familia', 'Herencias'],
   sameAs: [NEGOCIO.mapsUrl],
 });
 
