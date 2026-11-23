@@ -510,3 +510,7 @@ html, body { overflow-x: clip; }
 .page-head :focus-visible, .on-blue :focus-visible { outline-color: #fff; }
 /* El formulario, ya azul, se distingue sobre la banda azul con un velo claro y un filo */
 .on-blue .form { background: rgb(255 255 255 / .08); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .28); }
+
+/* Menú y barra de llamada opacos: el contenido no se transparenta al pasar por debajo */
+.nav { background: #fbfbfd; -webkit-backdrop-filter: none; backdrop-filter: none; z-index: 60; }
+@media (max-width: 760px) { .callbar { background: #fff; -webkit-backdrop-filter: none; backdrop-filter: none; z-index: 60; } }
