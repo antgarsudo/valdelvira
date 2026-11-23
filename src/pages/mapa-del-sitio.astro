@@ -15,9 +15,11 @@ const articulos = await getArticulos();
       <ul class="sitemap-list mt-s">
         <li><a href="/">Inicio</a></li><li><a href="/servicios/">Servicios</a></li><li><a href="/despacho/">El despacho</a></li><li><a href="/solicitar-cita/">Pedir cita</a></li><li><a href="/blog/">Blog</a></li>
       </ul>
-      <h2 class="t-title mt-l">Servicios</h2>
-      <ul class="sitemap-list mt-s">{servicios.map((s) => <li><a href={s.data.url}>{s.data.h1}</a></li>)}</ul>
-      <h2 class="t-title mt-l">Artículos</h2>
+      <h2 class="t-title mt-l">Derecho de tráfico</h2>
+      <ul class="sitemap-list mt-s">{servicios.filter((s) => s.data.bloque === 'trafico').map((s) => <li><a href={s.data.url}>{s.data.h1}</a></li>)}</ul>
+      <h2 class="t-title mt-l">Otros servicios</h2>
+      <ul class="sitemap-list mt-s">{servicios.filter((s) => s.data.bloque === 'otros').map((s) => <li><a href={s.data.url}>{s.data.h1}</a></li>)}</ul>
+      <h2 class="t-title mt-l">Artículos del blog</h2>
       <ul class="sitemap-list mt-s">{articulos.map((a) => <li><a href={a.data.url}>{a.data.h1}</a></li>)}</ul>
       <h2 class="t-title mt-l">Información legal</h2>
       <ul class="sitemap-list mt-s">{LEGALES.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
