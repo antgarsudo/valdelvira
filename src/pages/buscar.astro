@@ -2,14 +2,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Buscar | Valdelvira Abogados" description="Busque en la web de Valdelvira Abogados: accidentes de tráfico, multas, alcoholemia, familia, herencias, desahucios y artículos del blog." path="/buscar/" noindex crumbs={[{ name: 'Inicio', path: '/' }, { name: 'Buscar', path: '/buscar/' }]}>
+  <header class="page-head wrap">
+    <h1 class="t-headline">Buscar</h1>
+    <form class="search-row" action="/buscar/" method="get" role="search">
+      <label class="sr" for="s">Qué busca</label>
+      <input id="s" name="s" type="search" placeholder="Por ejemplo: latigazo, puntos, divorcio" autocomplete="off" />
+      <button class="btn" type="submit">Buscar</button>
+    </form>
+  </header>
   <section class="section">
     <div class="wrap">
-      <h1 class="t-headline">Buscar</h1>
-      <form class="search-row" action="/buscar/" method="get" role="search">
-        <label class="sr" for="s">Qué busca</label>
-        <input id="s" name="s" type="search" placeholder="Por ejemplo: latigazo, puntos, divorcio" autocomplete="off" />
-        <button class="btn" type="submit">Buscar</button>
-      </form>
       <p id="search-status" role="status" aria-live="polite"></p>
       <ol id="search-results" class="results"></ol>
     </div>

@@ -3,16 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { NEGOCIO, MENU_TRAFICO, MENU_OTROS } from '../data/negocio';
 ---
 <BaseLayout title="Página no encontrada | Valdelvira Abogados" description="La página que busca no existe o ha cambiado de dirección. Consulte nuestros servicios de tráfico, familia y herencias o llame al 954 72 52 12." path="/404/" noindex>
+  <header class="page-head wrap">
+    <h1 class="t-headline">No encontramos esta página</h1>
+    <p class="t-sub mt-s">Puede que haya cambiado de dirección con la nueva web. Estas son las páginas más consultadas, o llámenos al <a href={`tel:${NEGOCIO.tel}`}>{NEGOCIO.telefono}</a>.</p>
+    <form class="search-row" action="/buscar/" method="get" role="search">
+      <label class="sr" for="s404">Buscar en la web</label>
+      <input id="s404" name="s" type="search" placeholder="Por ejemplo: accidente, multa, divorcio" />
+      <button class="btn" type="submit">Buscar</button>
+    </form>
+  </header>
   <section class="section">
     <div class="wrap">
-      <h1 class="t-headline">No encontramos esta página</h1>
-      <p class="t-sub mt-s">Puede que haya cambiado de dirección con la nueva web. Estas son las páginas más consultadas, o llámenos al <a href={`tel:${NEGOCIO.tel}`}>{NEGOCIO.telefono}</a>.</p>
-      <form class="search-row" action="/buscar/" method="get" role="search">
-        <label class="sr" for="s404">Buscar en la web</label>
-        <input id="s404" name="s" type="search" placeholder="Por ejemplo: accidente, multa, divorcio" />
-        <button class="btn" type="submit">Buscar</button>
-      </form>
-      <div class="split mt-l" >
+      <div class="split">
         <nav aria-label="Tráfico"><h2 class="t-title">Tráfico</h2><ul class="sitemap-list mt-s">{MENU_TRAFICO.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul></nav>
         <nav aria-label="Otros servicios"><h2 class="t-title">Otros servicios</h2><ul class="sitemap-list mt-s">{MENU_OTROS.map((l) => <li><a href={l.href}>{l.label}</a></li>)}<li><a href="/solicitar-cita/">Pedir cita</a></li></ul></nav>
       </div>

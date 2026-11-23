@@ -6,10 +6,12 @@ const servicios = await getServicios();
 const articulos = await getArticulos();
 ---
 <BaseLayout title="Mapa del sitio | Valdelvira Abogados" description="Todas las páginas de la web de Valdelvira Abogados: servicios de tráfico, otros servicios, artículos del blog, contacto y textos legales." path="/mapa-del-sitio/" noindex crumbs={[{ name: 'Inicio', path: '/' }, { name: 'Mapa del sitio', path: '/mapa-del-sitio/' }]}>
+  <header class="page-head wrap">
+    <h1 class="t-headline">Mapa del sitio</h1>
+  </header>
   <section class="section">
     <div class="wrap">
-      <h1 class="t-headline">Mapa del sitio</h1>
-      <h2 class="t-title mt-l">Páginas</h2>
+      <h2 class="t-title">Páginas</h2>
       <ul class="sitemap-list mt-s">
         <li><a href="/">Inicio</a></li><li><a href="/servicios/">Servicios</a></li><li><a href="/despacho/">El despacho</a></li><li><a href="/solicitar-cita/">Pedir cita</a></li><li><a href="/blog/">Blog</a></li>
       </ul>
