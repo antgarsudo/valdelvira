@@ -9,11 +9,11 @@ export const organization = (logo: string, image: string) => ({
   '@type': 'LegalService',
   '@id': ORG_ID,
   name: NEGOCIO.nombre,
+  alternateName: 'V&V Abogados',
   url: `${SITE_URL}/`,
   logo: abs(logo),
   image: abs(image),
   telephone: NEGOCIO.tel,
-  priceRange: '€€',
   address: {
     '@type': 'PostalAddress',
     streetAddress: `${NEGOCIO.direccion.calle}, ${NEGOCIO.direccion.detalle}`,
@@ -24,6 +24,13 @@ export const organization = (logo: string, image: string) => ({
   },
   geo: { '@type': 'GeoCoordinates', latitude: NEGOCIO.geo.lat, longitude: NEGOCIO.geo.lng },
   hasMap: NEGOCIO.mapsUrl,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: NEGOCIO.tel,
+    contactType: 'customer service',
+    areaServed: 'ES',
+    availableLanguage: ['es'],
+  },
   openingHoursSpecification: NEGOCIO.horario.map((h) => ({
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: h.dias,
